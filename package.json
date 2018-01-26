@@ -2,7 +2,7 @@
   "name": "react-character-map",
   "version": "0.1.2",
   "description": "A react component for selecting ascii characters from a categorised character map",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:pallant/react-character-map.git",
   "author": "Joel - Pallant Digital",
   "license": "MIT",
