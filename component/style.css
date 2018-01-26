@@ -1,0 +1,60 @@
+.charMap--container {
+  font-size: 24px; }
+  .charMap--container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+
+.charMap--category-menu .charMap--category-menu-item.active {
+  text-decoration: underline;
+  color: white;
+  background: #41a6ac; }
+
+.charMap--category-menu li {
+  position: relative;
+  border-bottom: 1px solid #c8c8c8; }
+
+.charMap--category-menu a {
+  display: inline-block;
+  padding: .25em .5em;
+  width: 100%;
+  color: inherit;
+  text-decoration: none; }
+  .charMap--category-menu a:hover {
+    text-decoration: underline;
+    background: #c8c8c8; }
+
+.charMap--category {
+  display: none;
+  max-width: 100%;
+  width: 100%; }
+  .charMap--category.active {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 100%; }
+  .charMap--category li a {
+    display: inline-block;
+    position: relative;
+    margin: -1px 0 0 -1px;
+    padding: 0px 1px 1px 0px;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    border: 1px solid #c8c8c8;
+    box-sizing: border-box;
+    vertical-align: middle;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    line-height: 1.5em; }
+    .charMap--category li a:hover {
+      cursor: pointer;
+      background: #41a6ac;
+      color: white; }
+    .charMap--category li a:active {
+      cursor: pointer;
+      background: #5ebcc2;
+      color: white; }
