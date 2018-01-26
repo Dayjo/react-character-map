@@ -10,7 +10,7 @@
     "react": ">=15.0 <= 16"
   },
   "scripts": {
-    "build": "babel src -d dist"
+    "build": "babel src -d dist --copy-files"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
