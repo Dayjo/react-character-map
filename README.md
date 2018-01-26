@@ -25,13 +25,32 @@ import {CharacterMap} from 'react-character-map';
 
 ```js
 // Use the element;
-<CharacterMap onSelect={function(char,e){ console.log(char, e); }} />
+<CharacterMap onSelect={function(char,el){ console.log(char, el); }} />
 ```
 
 
 ### Properties
 
-The only property on the element is the `onSelect` callback. This is fired when the user clicks on a character.
+The only property on the element is the `onSelect` callback. This is fired when the user clicks on a character, and has two parameters;
+
+```js
+onSelect(char, el)
+```
+
+`char` is an Object of the character that has been selected, for instance;
+
+```js
+{ "hex": "&#263B;", "name": "BLACK SMILING FACE", "char": "☻" }
+```
+or
+```js
+{ "char":"ø" }
+```
+
+The second parameter `el` is the element that has been selected, this is an anchor.
+```html
+<a data-hex="&#00D8;" data-entity="&Oslash;" data-char="Ø" data-title="LATIN CAPITAL LETTER O WITH STROKE">Ø</a>
+```
 
 
 ### Styling
