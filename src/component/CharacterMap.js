@@ -39,7 +39,7 @@ class CharacterMap extends React.Component {
             if ( parseInt(self.state.active,10) === i ) {
                 // In the active category, loop through the characters and create the list
                 var currentItems = Object.keys(Chars[category]).map(function(p,c){
-                    return (<li key={Math.random()}>
+                    return (<li key={'topli' + p}>
                         <a data-hex={Chars[category][p].hex}  data-entity={Chars[category][p].entity}  data-char={Chars[category][p].char} data-title={Chars[category][p].name}  onClick={ ((e) => self.charClickHandler(e,Chars[category][p])) }>
                         {Chars[category][p].char}
                         </a>
@@ -47,13 +47,13 @@ class CharacterMap extends React.Component {
                 });
             }
 
-            categoryList.push((<li key={Math.random()} className={"charMap--category-menu-item" + (parseInt(self.state.active,10) === i ? ' active' : '')}>
+            categoryList.push((<li key={'clli' + category + i} className={"charMap--category-menu-item" + (parseInt(self.state.active,10) === i ? ' active' : '')}>
                 <a data-category-index={i} onClick={ self.clickCategoryHandler.bind(self) } href={'#' + category}>
                     {category}
                 </a>
             </li>));
 
-            return (<li key={Math.random()} data-category-name={category}>
+            return (<li key={'innerli' + category + i} data-category-name={category}>
                 <ul className={"charMap--category " + (parseInt(self.state.active,10) === i ? ' active' : '')}>
                     {currentItems}
                 </ul>
