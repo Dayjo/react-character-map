@@ -31,8 +31,8 @@ class CharacterMap extends React.Component {
         var self = this;
         var categoryList = [];
         var i = -1;
-        var { passedChars } = this.props;
-        var characters = passedChars || Chars;
+        var { characterData } = this.props;
+        var characters = characterData || Chars;
         // Loop through each category
         var charList = Object.keys(characters).map(function(category, current) {
             i++;
