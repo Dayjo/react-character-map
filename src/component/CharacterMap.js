@@ -17,7 +17,7 @@ class CharacterMap extends React.Component {
     }
 
     clickCategoryHandler(e) {
-        const cat = e.target.getAttribute('data-category-index');
+        var cat = e.target.getAttribute('data-category-index');
         this.setState({ active: cat });
     }
 
@@ -28,19 +28,18 @@ class CharacterMap extends React.Component {
     }
 
     render() {
-        const self = this;
-        const categoryList = [];
-        let i = -1;
-        const { characterData } = this.props;
-        const characters = characterData || Chars;
-        let currentItems;
+        var self = this;
+        var categoryList = [];
+        var i = -1;
+        var { characterData } = this.props;
+        var characters = characterData || Chars;
         // Loop through each category
-        const charList = Object.keys(characters).map(function(category, current) {
+        var charList = Object.keys(characters).map(function(category, current) {
             i++;
 
             if ( parseInt(self.state.active,10) === i ) {
                 // In the active category, loop through the characters and create the list
-                currentItems = Object.keys(characters[category]).map(function(p,c){
+                var currentItems = Object.keys(characters[category]).map(function(p,c){
                     return (<li key={'topli' + p}>
                         <a data-hex={characters[category][p].hex}  data-entity={characters[category][p].entity}  data-char={characters[category][p].char} data-title={characters[category][p].name}  onClick={ ((e) => self.charClickHandler(e,characters[category][p])) }>
                         {characters[category][p].char}
