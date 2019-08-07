@@ -56,8 +56,6 @@ class CharacterMap extends React.Component {
 
             const {charList} = this.charListFromCharacters(filteredCharacters);
             this.setState({charList});
-
-
         }
         this.setState({search});
     }
@@ -97,7 +95,6 @@ class CharacterMap extends React.Component {
     }
 
     componentDidMount() {
-
         var { characterData } = this.props;
         var characters = characterData || Chars;
         const {charList,categoryList} = this.charListFromCharacters(characters);
@@ -105,7 +102,6 @@ class CharacterMap extends React.Component {
     }
 
     render() {
-
         const {categoryList,charList,search} = this.state;
 
         return (
