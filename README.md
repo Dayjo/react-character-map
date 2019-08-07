@@ -25,13 +25,30 @@ import {CharacterMap} from 'react-character-map';
 
 ```js
 // Use the element;
-<CharacterMap onSelect={function(char,el){ console.log(char, el); }} />
+<CharacterMap
+	characterData={optionalCustomCharacterData}
+	onSelect={function(char,el){ console.log(char, el); }}
+/>
 ```
 
 
 ### Properties
 
-The only property on the element is the `onSelect` callback. This is fired when the user clicks on a character, and has two parameters;
+* `characterData` is an optional property that overrides the default character map. `characterData` should be provided in the form:
+```js
+{
+    "TAB NAME": [
+        { "entity": "&copy;", "hex": "&#00A9;", "name": "COPYRIGHT SIGN", "char": "©" } // char is required
+    ],
+
+
+    "ANOTHER TAB": [
+        { MORE CHARACTER DATA }
+    ]
+}
+
+```
+* `onSelect` callback: This is fired when the user clicks on a character, and has two parameters;
 
 ```js
 onSelect(char, el)

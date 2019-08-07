@@ -31,17 +31,18 @@ class CharacterMap extends React.Component {
         var self = this;
         var categoryList = [];
         var i = -1;
-
+        var { characterData } = this.props;
+        var characters = characterData || Chars;
         // Loop through each category
-        var charList = Object.keys(Chars).map(function(category, current) {
+        var charList = Object.keys(characters).map(function(category, current) {
             i++;
 
             if ( parseInt(self.state.active,10) === i ) {
                 // In the active category, loop through the characters and create the list
-                var currentItems = Object.keys(Chars[category]).map(function(p,c){
+                var currentItems = Object.keys(characters[category]).map(function(p,c){
                     return (<li key={'topli' + p}>
-                        <a data-hex={Chars[category][p].hex}  data-entity={Chars[category][p].entity}  data-char={Chars[category][p].char} data-title={Chars[category][p].name}  onClick={ ((e) => self.charClickHandler(e,Chars[category][p])) }>
-                        {Chars[category][p].char}
+                        <a data-hex={characters[category][p].hex}  data-entity={characters[category][p].entity}  data-char={characters[category][p].char} data-title={characters[category][p].name}  onClick={ ((e) => self.charClickHandler(e,characters[category][p])) }>
+                        {characters[category][p].char}
                         </a>
                     </li>);
                 });
@@ -59,7 +60,6 @@ class CharacterMap extends React.Component {
                 </ul>
             </li>);
         });
-
 
         return (
             <div className="charMap--container">
