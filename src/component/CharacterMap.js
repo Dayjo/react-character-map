@@ -47,7 +47,7 @@ class CharacterMap extends React.Component {
                 Object.keys(characters[group]).forEach(character => {
                     if (
                         characters[group][character].name &&
-                        characters[group][character].name.toLowerCase().indexOf( search.toLowerCase() ) !== -1
+                        characters[group][character].name.toLowerCase().indexOf( search.toLowerCase() ) === 0
                     ) {
                         filteredCharacters['Results'].push(characters[group][character]);
                     }
