@@ -1,7 +1,7 @@
 {
     "Misc": [
 
-           { "char": "™", "name": "TRADEMARK SIGN" }
+           { "entity": "&trade;", "hex": "&#2122;", "name": "TRADEMARK SIGN", "char": "™" }
            ,{ "entity": "&copy;", "hex": "&#00A9;", "name": "COPYRIGHT SIGN", "char": "©" }
            ,{ "entity": "&reg;", "hex": "&#00AE;", "name": "REGISTERED SIGN", "char": "®" }
            ,{ "hex": "&#0024;", "name": "DOLLAR SIGN", "char": "$" }
@@ -504,7 +504,7 @@
        ],
 
 
-       "Math": [
+    "Math": [
         { "hex": "&#2200;" , "entity": "&forall;", "name": "FOR ALL", "char": "∀" }
        ,{ "hex": "&#2201;", "name": "COMPLEMENT", "char": "∁" }
        ,{ "hex": "&#2202;" , "entity": "&part;", "name": "PARTIAL DIFFERENTIAL", "char": "∂" }
@@ -1061,10 +1061,11 @@
        ,{ "hex": "&#2091;", "name": "LATIN SUBSCRIPT SMALL LETTER E", "char": "ₑ" }
        ,{ "hex": "&#2092;", "name": "LATIN SUBSCRIPT SMALL LETTER O", "char": "ₒ" }
        ,{ "hex": "&#2093;", "name": "LATIN SUBSCRIPT SMALL LETTER X", "char": "ₓ" }
-       ,{ "hex": "&#2094;", "name": "LATIN SUBSCRIPT SMALL LETTER SCHWA", "char": "ₔ" }],
+       ,{ "hex": "&#2094;", "name": "LATIN SUBSCRIPT SMALL LETTER SCHWA", "char": "ₔ" }
+       ],
 
 
-       "Latin": [
+    "Latin": [
        { "entity": "&Agrave;", "hex": "&#00C0;", "name": "LATIN CAPITAL LETTER A WITH GRAVE", "char": "À" }
        ,{ "entity": "&Aacute;", "hex": "&#00C1;", "name": "LATIN CAPITAL LETTER A WITH ACUTE", "char": "Á" }
        ,{ "entity": "&Acirc;", "hex": "&#00C2;", "name": "LATIN CAPITAL LETTER A WITH CIRCUMFLEX", "char": "Â" }
@@ -1890,8 +1891,11 @@
        ,{ "hex": "&#1EFC;", "name": "LATIN CAPITAL LETTER MIDDLE-WELSH V", "char": "Ỽ" }
        ,{ "hex": "&#1EFD;", "name": "LATIN SMALL LETTER MIDDLE-WELSH V", "char": "ỽ" }
        ,{ "hex": "&#1EFE;", "name": "LATIN CAPITAL LETTER Y WITH LOOP", "char": "Ỿ" }
-       ,{ "hex": "&#1EFF;", "name": "LATIN SMALL LETTER Y WITH LOOP", "char": "ỿ" }],
-       "Arrows": [
+       ,{ "hex": "&#1EFF;", "name": "LATIN SMALL LETTER Y WITH LOOP", "char": "ỿ" }
+       ],
+
+
+    "Arrows": [
            { "entity": "&larr;", "hex": "&#2190;", "name": "LEFTWARDS ARROW", "char": "←" }
            ,{ "entity": "&uarr;", "hex": "&#2191;", "name": "UPWARDS ARROW", "char": "↑" }
            ,{ "entity": "&rarr;", "hex": "&#2192;", "name": "RIGHTWARDS ARROW", "char": "→" }
