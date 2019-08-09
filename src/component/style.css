@@ -4,6 +4,9 @@
     list-style-type: none;
     margin: 0;
     padding: 0; }
+.charMap--category-menu .charMap--category-menu-item {
+  padding: 2px;
+}
 
 .charMap--category-menu .charMap--category-menu-item.active {
   text-decoration: underline;
@@ -14,15 +17,22 @@
   position: relative;
   border-bottom: 1px solid #c8c8c8; }
 
-.charMap--category-menu a {
+.charMap--category-menu button {
   display: inline-block;
   padding: .25em .5em;
   width: 100%;
   color: inherit;
-  text-decoration: none; }
-  .charMap--category-menu a:hover {
+  text-decoration: none;
+  border: none;
+  background: none;
+}
+  .charMap--category-menu button:hover {
     text-decoration: underline;
     background: #c8c8c8; }
+
+.charMap--category-menu {
+  background: #EEE;
+}
 
 .charMap--category {
   display: none;
@@ -33,28 +43,35 @@
     flex-wrap: wrap;
     align-items: flex-start;
     height: 100%; }
-  .charMap--category li a {
+    .charMap--category li {
+      border: 1px solid #c8c8c8;
+      padding: 2px;
+    }
+    .charMap--category li button {
     display: inline-block;
+    background-color: #fff;
+    background-blend-mode: color;
     position: relative;
-    margin: -1px 0 0 -1px;
-    padding: 0px 1px 1px 0px;
+    margin: 0;
+    padding: 1px;
     width: 1.5em;
     height: 1.5em;
     text-align: center;
-    border: 1px solid #c8c8c8;
     box-sizing: border-box;
     vertical-align: middle;
     overflow: hidden;
     cursor: pointer;
     user-select: none;
     -ms-user-select: none;
+    border: none;
     /* Internet Explorer/Edge */
     line-height: 1.5em; }
-    .charMap--category li a:hover {
+    .charMap--category li button:hover {
       cursor: pointer;
       background: #41a6ac;
       color: white; }
-    .charMap--category li a:active {
+    .charMap--category li button:active {
       cursor: pointer;
       background: #5ebcc2;
       color: white; }
+
