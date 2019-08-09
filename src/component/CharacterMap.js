@@ -36,7 +36,6 @@ class CharacterMap extends React.Component {
     handleSearchChange( e ) {
         const search = e.target.value;
         const {fullCharList,charList} = this.state;
-        console.log( search );
         if ('' === search) {
             this.setState({charList: fullCharList})
         } else {
