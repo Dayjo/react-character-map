@@ -40,36 +40,51 @@ class CharacterMap extends React.Component {
                 // In the active category, loop through the characters and create the list
                 var currentItems = Object.keys(Chars[category]).map(function(p,c){
                     return (<li key={'topli' + p}>
-                        <a data-hex={Chars[category][p].hex}  data-entity={Chars[category][p].entity}  data-char={Chars[category][p].char} data-title={Chars[category][p].name}  onClick={ ((e) => self.charClickHandler(e,Chars[category][p])) }>
-                        {Chars[category][p].char}
-                        </a>
+                        <button
+                            data-hex={Chars[category][p].hex}
+                            data-entity={Chars[category][p].entity}
+                            data-char={Chars[category][p].char}
+                            data-title={Chars[category][p].name}
+                            onClick={ ((e) => self.charClickHandler(e,Chars[category][p])) }
+                        >
+                            {Chars[category][p].char}
+                        </button>
                     </li>);
                 });
             }
 
             categoryList.push((<li key={'clli' + category + i} className={"charMap--category-menu-item" + (parseInt(self.state.active,10) === i ? ' active' : '')}>
-                <a data-category-index={i} onClick={ self.clickCategoryHandler.bind(self) } href={'#' + category}>
+                <button
+                    data-category-index={i}
+                    onClick={ self.clickCategoryHandler.bind(self) }
+                >
                     {category}
-                </a>
+                </button>
             </li>));
 
-            return (<li key={'innerli' + category + i} data-category-name={category}>
-                <ul className={"charMap--category " + (parseInt(self.state.active,10) === i ? ' active' : '')}>
-                    {currentItems}
-                </ul>
-            </li>);
+            return (
+                <li key={'innerli' + category + i}
+                    data-category-name={category}
+                >
+                    <ul
+                        className={"charMap--category " + (parseInt(self.state.active,10) === i ? ' active' : '')}
+                    >
+                        {currentItems}
+                    </ul>
+                </li>
+            );
         });
 
 
         return (
             <div className="charMap--container">
-                <ul className="charMap--category-menu">
+                <ul className="charMap--category-menu" aria-label="Categories">
                 { categoryList}
                 </ul>
-                <ul className="charMap--categories">
+                <ul className="charMap--categories" aria-label="Character List">
                 { charList }
                 </ul>
-            </div>
+             </div>
         )
     }
 }
