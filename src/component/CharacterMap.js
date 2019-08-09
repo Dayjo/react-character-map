@@ -42,16 +42,40 @@ class CharacterMap extends React.Component {
             var {characterData} = this.props;
             var characters = characterData || Chars;
             var filteredCharacters = {'Results': []};
+            var sortedResults = [];
             Object.keys(characters).forEach(group => {
                 Object.keys(characters[group]).forEach(character => {
-                    if (
-                        characters[group][character].name &&
-                        characters[group][character].name.toLowerCase().indexOf( search.toLowerCase() ) === 0
-                    ) {
-                        filteredCharacters['Results'].push(characters[group][character]);
+                    if (!characters[group][character].name) {
+                        return;
+                    }
+                    // If search string is one character long, look for names that start with that character.
+                    if (1===search.length) {
+                        if (0 === characters[group][character].name.toLowerCase().indexOf(search.toLowerCase())) {
+                            filteredCharacters['Results'].push(characters[group][character]);
+                        }
+                    } else {
+
+                        // When the search string is two or more characters, do a full search of the name.
+                        var index = characters[group][character].name.toLowerCase().indexOf(search.toLowerCase());
+                        if (-1 !== index) {
+                            // Store the results in a sorted array of buckets based on search result index.
+                            // Matches with index of 20 or more are stored in the final bucket.
+                            var sortPosition = index < 20 ? index : 20;
+                            sortedResults[index] = sortedResults[index] || [];
+                            sortedResults[index].push(characters[group][character]);
+                        }
                     }
                 } );
             } );
+
+            // If we built a sorted array, map that to filteredCharacters, preserving the sert order.
+            if (0 !== sortedResults.length) {
+                sortedResults.forEach(function(results) {
+                    results.forEach(function(result) {
+                        filteredCharacters['Results'].push(result);
+                    } );
+                } );
+            }
 
             const {charList} = this.charListFromCharacters(filteredCharacters);
             this.setState({charList});
