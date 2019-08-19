@@ -1,50 +1,47 @@
 {
     "Misc": [
 
-
-           {"char": "™", "name": "TRADEMARK SIGN" }
-
+           { "entity": "&trade;", "hex": "&#2122;", "name": "TRADEMARK SIGN", "char": "™" }
            ,{ "entity": "&copy;", "hex": "&#00A9;", "name": "COPYRIGHT SIGN", "char": "©" }
            ,{ "entity": "&reg;", "hex": "&#00AE;", "name": "REGISTERED SIGN", "char": "®" }
-           ,{"char": "$" }
-           ,{"char": "€" }
+           ,{ "hex": "&#0024;", "name": "DOLLAR SIGN", "char": "$" }
+           ,{ "hex": "&#20AC;", "name": "EURO SIGN", "char": "€" }
            ,{ "entity": "&cent;", "hex": "&#00A2;", "name": "CENT SIGN", "char": "¢" }
            ,{ "entity": "&pound;", "hex": "&#00A3;", "name": "POUND SIGN", "char": "£" }
            ,{ "entity": "&curren;", "hex": "&#00A4;", "name": "CURRENCY SIGN", "char": "¤" }
            ,{ "entity": "&yen;", "hex": "&#00A5;", "name": "YEN SIGN", "char": "¥" }
            ,{ "entity": "&para;", "hex": "&#00B6;", "name": "PILCROW SIGN", "char": "¶" }
            ,{ "entity": "&sect;", "hex": "&#00A7;", "name": "SECTION SIGN", "char": "§" }
-
-           ,{ "char": "❝" }
-           ,{ "char":"❞" }
-           ,{ "char":"∞" }
-           ,{ "char":"ø" }
-           ,{ "char":"≠" }
-           ,{ "char":"%" }
-           ,{ "char":"…" }
-           ,{ "char":"∫" }
-           ,{ "char":"≈" }
-           ,{ "char":"∴" }
-           ,{ "char":"∝" }
-           ,{ "char":"µ" }
-           ,{ "char":"∂" }
-           ,{ "char":"Ω" }
-           ,{ "char":"Φ" }
-           ,{ "char":"Ψ" }
-           ,{ "char":"λ" }
-           ,{ "char":"ϴ" }
-           ,{ "char":"ω" }
-           ,{ "char":"ꝏ" }
-           ,{ "char":"ᵠ" }
-           ,{ "char":"℃" }
-           ,{ "char":"℉" }
-           ,{ "char":"⚑" }
-           ,{ "char":"⚐" }
-           ,{ "char":"❦" }
-           ,{ "char":"☙" }
-           ,{ "char":"♨" }
-           ,{ "char":"☁" }
-           ,{ "char":"⚖" }
+           ,{ "hex": "&#275D;", "name": "HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT", "char": "❝" }
+           ,{ "hex": "&#275E;", "name": "HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT", "char": "❞" }
+           ,{ "entity": "&infin;", "hex": "&#221E;", "name": "INFINITY", "char": "∞" }
+           ,{ "entity": "&oslash;", "hex": "&#00F8;", "name": "LATIN SMALL LETTER O WITH STROKE", "char": "ø" }
+           ,{ "entity": "&ne;", "hex": "&#2260;", "name": "NOT EQUAL TO", "char": "≠" }
+           ,{ "hex": "&#0025;", "name": "PERCENT SIGN", "char": "%" }
+           ,{ "entity": "&hellip;", "hex": "&#2026;", "name": "HORIZONTAL ELLIPSIS", "char": "…" }
+           ,{ "entity": "&int;", "hex": "&#222B;", "name": "INTEGRAL", "char": "∫" }
+           ,{ "entity": "&asymp;", "hex": "&#2248;", "name": "ALMOST EQUAL TO", "char": "≈" }
+           ,{ "entity": "&there4;", "hex": "&#2234;", "name": "THEREFORE", "char": "∴" }
+           ,{ "entity": "&prop;", "hex": "&#221D;", "name": "PROPORTIONAL TO", "char": "∝" }
+           ,{ "entity": "&micro;", "hex": "&#00B5;", "name": "MICRO SIGN", "char": "µ" }
+           ,{ "entity": "&part;", "hex": "&#2202;", "name": "PARTIAL DIFFERENTIAL", "char": "∂" }
+           ,{ "entity": "&Omega;", "hex": "&#03A9;", "name": "GREEK CAPITAL LETTER OMEGA", "char": "Ω" }
+           ,{ "entity": "&Phi;", "hex": "&#03A6;", "name": "GREEK CAPITAL LETTER PHI", "char": "Φ" }
+           ,{ "entity": "&Psi;", "hex": "&#03A8;", "name": "GREEK CAPITAL LETTER PSI", "char": "Ψ" }
+           ,{ "entity": "&lambda;", "hex": "&#03BB;", "name": "GREEK SMALL LETTER LAMDA", "char": "λ" }
+           ,{ "hex": "&#03F4;", "name": "GREEK CAPITAL THETA SYMBOL", "char": "ϴ" }
+           ,{ "entity": "&omega;", "hex": "&#03C9;", "name": "GREEK SMALL LETTER OMEGA", "char": "ω" }
+           ,{ "hex": "&#A74F;", "name": "LATIN SMALL LETTER OO", "char": "ꝏ" }
+           ,{ "hex": "&#1D60;", "name": "MODIFIER LETTER SMALL GREEK PHI", "char": "ᵠ" }
+           ,{ "hex": "&#2103;", "name": "DEGREE CELSIUS", "char": "℃" }
+           ,{ "hex": "&#2109;", "name": "DEGREE FAHRENHEIT", "char": "℉" }
+           ,{ "hex": "&#2691;", "name": "BLACK FLAG", "char": "⚑" }
+           ,{ "hex": "&#2690;", "name": "WHITE FLAG", "char": "⚐" }
+           ,{ "hex": "&#2766;", "name": "FLORAL HEART", "char": "❦" }
+           ,{ "hex": "&#2619;", "name": "REVERSED ROTATED FLORAL HEART BULLET", "char": "☙" }
+           ,{ "hex": "&#2668;", "name": "HOT SPRINGS EMOJI", "char": "♨" }
+           ,{ "hex": "&#2601;", "name": "CLOUD", "char": "☁" }
+           ,{ "hex": "&#2696;", "name": "SCALES EMOJI", "char": "⚖" }
 
            ,{ "entity": "&uml;", "hex": "&#00A8;", "name": "DIAERESIS", "char": "¨" }
            ,{ "entity": "&not;", "hex": "&#00AC;", "name": "NOT SIGN", "char": "¬" }
@@ -507,7 +504,7 @@
        ],
 
 
-       "Math": [
+    "Math": [
         { "hex": "&#2200;" , "entity": "&forall;", "name": "FOR ALL", "char": "∀" }
        ,{ "hex": "&#2201;", "name": "COMPLEMENT", "char": "∁" }
        ,{ "hex": "&#2202;" , "entity": "&part;", "name": "PARTIAL DIFFERENTIAL", "char": "∂" }
@@ -1064,10 +1061,11 @@
        ,{ "hex": "&#2091;", "name": "LATIN SUBSCRIPT SMALL LETTER E", "char": "ₑ" }
        ,{ "hex": "&#2092;", "name": "LATIN SUBSCRIPT SMALL LETTER O", "char": "ₒ" }
        ,{ "hex": "&#2093;", "name": "LATIN SUBSCRIPT SMALL LETTER X", "char": "ₓ" }
-       ,{ "hex": "&#2094;", "name": "LATIN SUBSCRIPT SMALL LETTER SCHWA", "char": "ₔ" }],
+       ,{ "hex": "&#2094;", "name": "LATIN SUBSCRIPT SMALL LETTER SCHWA", "char": "ₔ" }
+       ],
 
 
-       "Latin": [
+    "Latin": [
        { "entity": "&Agrave;", "hex": "&#00C0;", "name": "LATIN CAPITAL LETTER A WITH GRAVE", "char": "À" }
        ,{ "entity": "&Aacute;", "hex": "&#00C1;", "name": "LATIN CAPITAL LETTER A WITH ACUTE", "char": "Á" }
        ,{ "entity": "&Acirc;", "hex": "&#00C2;", "name": "LATIN CAPITAL LETTER A WITH CIRCUMFLEX", "char": "Â" }
@@ -1893,8 +1891,11 @@
        ,{ "hex": "&#1EFC;", "name": "LATIN CAPITAL LETTER MIDDLE-WELSH V", "char": "Ỽ" }
        ,{ "hex": "&#1EFD;", "name": "LATIN SMALL LETTER MIDDLE-WELSH V", "char": "ỽ" }
        ,{ "hex": "&#1EFE;", "name": "LATIN CAPITAL LETTER Y WITH LOOP", "char": "Ỿ" }
-       ,{ "hex": "&#1EFF;", "name": "LATIN SMALL LETTER Y WITH LOOP", "char": "ỿ" }],
-       "Arrows": [
+       ,{ "hex": "&#1EFF;", "name": "LATIN SMALL LETTER Y WITH LOOP", "char": "ỿ" }
+       ],
+
+
+    "Arrows": [
            { "entity": "&larr;", "hex": "&#2190;", "name": "LEFTWARDS ARROW", "char": "←" }
            ,{ "entity": "&uarr;", "hex": "&#2191;", "name": "UPWARDS ARROW", "char": "↑" }
            ,{ "entity": "&rarr;", "hex": "&#2192;", "name": "RIGHTWARDS ARROW", "char": "→" }
