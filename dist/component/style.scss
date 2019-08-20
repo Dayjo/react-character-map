@@ -1,0 +1,92 @@
+$background-highlight: rgb(65, 166, 172);
+$font-size: 24px;
+$border-color: rgb(200,200,200);
+
+.charMap--container {
+    font-size: $font-size;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.charMap--category-menu {
+
+    .charMap--category-menu-item.active {
+        text-decoration: underline;
+        color: white;
+        background: $background-highlight;
+    }
+
+    li
+    {
+        position: relative;
+
+        border-bottom: 1px solid $border-color;
+    }
+
+    a {
+        display: inline-block;
+        padding: .25em .5em;
+        // left: 0; top: 0;
+        // right: 0; bottom: 0;
+        width: 100%;
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            background: $border-color;
+        }
+
+    }
+}
+
+.charMap--category {
+    display: none;
+    max-width: 100%;
+    width: 100%;
+
+    &.active {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 100%
+    }
+
+
+    li a {
+
+        display: inline-block;
+
+        position: relative;
+        margin: -1px 0 0 -1px;
+        padding: 0px 1px 1px 0px;
+        width: 1.5em; height: 1.5em;
+       text-align: center;
+       border: 1px solid $border-color;
+
+       box-sizing: border-box;
+       vertical-align: middle;
+
+       overflow: hidden;
+       cursor: pointer;
+       user-select: none;
+       -ms-user-select: none; /* Internet Explorer/Edge */
+       line-height: 1.5em;
+
+       &:hover {
+            cursor: pointer;
+            background: $background-highlight;
+            color: white;
+        }
+
+        &:active {
+            cursor: pointer;
+            background: lighten($background-highlight,10);
+            color: white;
+        }
+    }
+}
