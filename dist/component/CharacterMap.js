@@ -47,17 +47,51 @@ var CharacterMap = function (_React$Component) {
         };
         _this.resultsCache = [];
         _this.handleSearchChange = _this.handleSearchChange.bind(_this);
+        _this.clickCategoryHandler = _this.clickCategoryHandler.bind(_this);
+        _this.setupCharactersAtTab = _this.setupCharactersAtTab.bind(_this);
         return _this;
     }
+
+    /**
+     * Handle clicks to the category tabs.
+     *
+     * @param {Event} e The React synthetic event.
+     */
+
 
     _createClass(CharacterMap, [{
         key: 'clickCategoryHandler',
         value: function clickCategoryHandler(e) {
             var cat = e.target.getAttribute('data-category-index');
-            this.setState({ active: cat });
+            this.setupCharactersAtTab(cat);
         }
 
-        // Run the callback function
+        /**
+         * Extract character data at a tab.
+         *
+         * @param {Number} tab The tab to display.
+         */
+
+    }, {
+        key: 'setupCharactersAtTab',
+        value: function setupCharactersAtTab(tab) {
+            var characterData = this.props.characterData;
+
+            var characters = characterData || _chars2.default;
+
+            var _charListFromCharacte = this.charListFromCharacters(characters, tab),
+                charList = _charListFromCharacte.charList,
+                categoryList = _charListFromCharacte.categoryList;
+
+            this.setState({ charList: charList, categoryList: categoryList, fullCharList: charList });
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.setupCharactersAtTab(0);
+        }
+
+        // Handle clicks to the characters, running the callback function.
 
     }, {
         key: 'charClickHandler',
@@ -66,12 +100,15 @@ var CharacterMap = function (_React$Component) {
             return this.props.onSelect(char, e.target);
         }
 
-        // Perform the search
+        /**
+         * Perform the character search.
+         *
+         * @param {string} search The search string.
+         */
 
     }, {
         key: 'performSearch',
         value: function performSearch(search) {
-            console.log('performing search %s', search);
             var characterData = this.props.characterData;
 
             var characters = characterData || _chars2.default;
@@ -130,8 +167,8 @@ var CharacterMap = function (_React$Component) {
                 var filteredCharacters = this.resultsCache[search] ? this.resultsCache[search] : this.performSearch(search);
                 this.resultsCache[search] = filteredCharacters;
 
-                var _charListFromCharacte = this.charListFromCharacters(filteredCharacters),
-                    _charList = _charListFromCharacte.charList;
+                var _charListFromCharacte2 = this.charListFromCharacters(filteredCharacters, 0),
+                    _charList = _charListFromCharacte2.charList;
 
                 this.setState({ charList: _charList });
             }
@@ -139,15 +176,16 @@ var CharacterMap = function (_React$Component) {
         }
     }, {
         key: 'charListFromCharacters',
-        value: function charListFromCharacters(characters) {
+        value: function charListFromCharacters(characters, active) {
             var self = this;
-            var i = -1;
             var categoryList = [];
+            var i = -1;
+            self.activeTab = parseInt(active, 10);
             // Loop through each category
-            var charList = Object.keys(characters).map(function (category, current) {
+            var charList = Object.keys(characters).map(function (category) {
                 i++;
 
-                if (parseInt(self.state.active, 10) === i) {
+                if (self.activeTab === i) {
                     // In the active category, loop through the characters and create the list
                     var currentItems = Object.keys(characters[category]).map(function (p, c) {
                         return _react2.default.createElement(
@@ -169,15 +207,14 @@ var CharacterMap = function (_React$Component) {
                         );
                     });
                 }
-
                 categoryList.push(_react2.default.createElement(
                     'li',
-                    { key: 'clli' + category + i, className: "charMap--category-menu-item" + (parseInt(self.state.active, 10) === i ? ' active' : '') },
+                    { key: 'clli' + category + i, className: "charMap--category-menu-item" + (self.activeTab === i ? ' active' : '') },
                     _react2.default.createElement(
                         'button',
                         {
                             'data-category-index': i,
-                            onClick: self.clickCategoryHandler.bind(self)
+                            onClick: self.clickCategoryHandler
                         },
                         category
                     )
@@ -191,7 +228,7 @@ var CharacterMap = function (_React$Component) {
                     _react2.default.createElement(
                         'ul',
                         {
-                            className: "charMap--category " + (parseInt(self.state.active, 10) === i ? ' active' : '')
+                            className: "charMap--category " + (self.activeTab === i ? ' active' : '')
                         },
                         currentItems
                     )
@@ -200,26 +237,12 @@ var CharacterMap = function (_React$Component) {
             return { charList: charList, categoryList: categoryList };
         }
     }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            var characterData = this.props.characterData;
-
-            var characters = characterData || _chars2.default;
-
-            var _charListFromCharacte2 = this.charListFromCharacters(characters),
-                charList = _charListFromCharacte2.charList,
-                categoryList = _charListFromCharacte2.categoryList;
-
-            this.setState({ charList: charList, categoryList: categoryList, fullCharList: charList });
-        }
-    }, {
         key: 'render',
         value: function render() {
             var _state2 = this.state,
                 categoryList = _state2.categoryList,
                 charList = _state2.charList,
                 search = _state2.search;
-
 
             return _react2.default.createElement(
                 'div',
