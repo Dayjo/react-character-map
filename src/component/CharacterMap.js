@@ -172,7 +172,7 @@ class CharacterMap extends React.Component {
         const {categoryList,charList,search} = this.state;
         return (
             <div className="charMap--container">
-                <ul>
+                <ul className="charMap--filter">
                     <label for="filter">Filter: </label>
                     <input
                         type="text"
