@@ -72,3 +72,13 @@ The package comes with very basic styling, it is recommended that you style it t
 
 
 ![](http://c.dayjo.me/0I2H0s0M0s2O/Screen%20Recording%202018-01-26%20at%2002.51%20pm.gif)
+
+
+
+### Thanks
+Thank you to the contributors for actively improving and making suggestions to the repo.
+
+https://github.com/Dayjo/react-character-map/graphs/contributors
+
+* @adamsilverstein
+* @jeffpaul

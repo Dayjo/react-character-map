@@ -249,7 +249,7 @@ var CharacterMap = function (_React$Component) {
                 { className: 'charMap--container' },
                 _react2.default.createElement(
                     'ul',
-                    null,
+                    { className: 'charMap--filter' },
                     _react2.default.createElement(
                         'label',
                         { 'for': 'filter' },
