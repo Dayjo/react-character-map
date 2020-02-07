@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -175,6 +177,27 @@ var CharacterMap = function (_React$Component) {
             this.setState({ search: search });
         }
     }, {
+        key: 'getCategoryName',
+        value: function getCategoryName(category) {
+            /**
+             * The categoryNames prop is expected to be a JavaScript object with translated category names corresponding
+             * to the object keys in chars.json. Keys are the untranslated names from chars.json; values are the translated
+             * names.
+             */
+            var categoryNames = this.props.categoryNames;
+
+
+            if (!categoryNames || 'object' !== (typeof categoryNames === 'undefined' ? 'undefined' : _typeof(categoryNames))) {
+                return category;
+            }
+
+            if (!(category in categoryNames) || 'string' !== typeof categoryNames[category]) {
+                return category;
+            }
+
+            return categoryNames[category];
+        }
+    }, {
         key: 'charListFromCharacters',
         value: function charListFromCharacters(characters, active) {
             var self = this;
@@ -216,7 +239,7 @@ var CharacterMap = function (_React$Component) {
                             'data-category-index': i,
                             onClick: self.clickCategoryHandler
                         },
-                        category
+                        self.getCategoryName(category)
                     )
                 ));
 
@@ -244,6 +267,11 @@ var CharacterMap = function (_React$Component) {
                 charList = _state2.charList,
                 search = _state2.search;
 
+
+            var filterLabelText = this.props.filterLabelText || 'Filter';
+            var categoriesLabelText = this.props.categoriesLabelText || 'Categories';
+            var characterListLabelText = this.props.characterListLabelText || 'Character List';
+
             return _react2.default.createElement(
                 'div',
                 { className: 'charMap--container' },
@@ -253,12 +281,12 @@ var CharacterMap = function (_React$Component) {
                     _react2.default.createElement(
                         'label',
                         { 'for': 'filter' },
-                        'Filter: '
+                        filterLabelText + ': '
                     ),
                     _react2.default.createElement('input', {
                         type: 'text',
                         name: 'filter',
-                        'aria-label': 'Filter',
+                        'aria-label': filterLabelText,
                         value: search,
                         onChange: this.handleSearchChange,
                         autoComplete: false
@@ -266,12 +294,12 @@ var CharacterMap = function (_React$Component) {
                 ),
                 '' === search && _react2.default.createElement(
                     'ul',
-                    { className: 'charMap--category-menu', 'aria-label': 'Categories' },
+                    { className: 'charMap--category-menu', 'aria-label': categoriesLabelText },
                     categoryList
                 ),
                 _react2.default.createElement(
                     'ul',
-                    { className: 'charMap--categories', 'aria-label': 'Character List' },
+                    { className: 'charMap--categories', 'aria-label': characterListLabelText },
                     charList
                 )
             );
