@@ -49,6 +49,10 @@ var CharacterMap = function (_React$Component) {
         _this.handleSearchChange = _this.handleSearchChange.bind(_this);
         _this.clickCategoryHandler = _this.clickCategoryHandler.bind(_this);
         _this.setupCharactersAtTab = _this.setupCharactersAtTab.bind(_this);
+
+        // To-do: Update handling of refs. React 16.3+ has createRef. 16.8+ has useRef.
+        _this.bindInputRef = _this.bindInputRef.bind(_this);
+        _this.searchInput = null;
         return _this;
     }
 
@@ -88,7 +92,29 @@ var CharacterMap = function (_React$Component) {
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
+            var _this2 = this;
+
             this.setupCharactersAtTab(0);
+
+            // Focus search input on mount.
+            if (this.searchInput && 'focus' in this.searchInput) {
+                // This is more reliable after a short wait.
+                window.setTimeout(function () {
+                    _this2.searchInput.focus();
+                }, 25);
+            }
+        }
+
+        /**
+         * Binds the input element to the component as a ref.
+         *
+         * @param {object} element The search input element.
+         */
+
+    }, {
+        key: 'bindInputRef',
+        value: function bindInputRef(element) {
+            this.searchInput = element;
         }
 
         // Handle clicks to the characters, running the callback function.
@@ -261,7 +287,8 @@ var CharacterMap = function (_React$Component) {
                         'aria-label': 'Filter',
                         value: search,
                         onChange: this.handleSearchChange,
-                        autoComplete: false
+                        autoComplete: false,
+                        ref: this.bindInputRef
                     })
                 ),
                 '' === search && _react2.default.createElement(
