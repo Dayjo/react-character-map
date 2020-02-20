@@ -54,14 +54,13 @@ class CharacterMap extends React.Component {
         this.setupCharactersAtTab( 0 );
 
         // Focus search input on mount.
-        if ( this.searchInput && 'focus' in this.searchInput ) {
+        if ( false !== this.props.autofocus && this.searchInput && 'focus' in this.searchInput ) {
             // This is more reliable after a short wait.
             window.setTimeout( () => {
                 this.searchInput.focus();
             }, 25 );
         }
     }
-
 
     /**
      * Binds the input element to the component as a ref.

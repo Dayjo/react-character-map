@@ -97,7 +97,7 @@ var CharacterMap = function (_React$Component) {
             this.setupCharactersAtTab(0);
 
             // Focus search input on mount.
-            if (this.searchInput && 'focus' in this.searchInput) {
+            if (false !== this.props.autofocus && this.searchInput && 'focus' in this.searchInput) {
                 // This is more reliable after a short wait.
                 window.setTimeout(function () {
                     _this2.searchInput.focus();
