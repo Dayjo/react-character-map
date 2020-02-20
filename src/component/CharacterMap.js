@@ -22,6 +22,10 @@ class CharacterMap extends React.Component {
         this.handleSearchChange = this.handleSearchChange.bind( this );
         this.clickCategoryHandler = this.clickCategoryHandler.bind( this );
         this.setupCharactersAtTab = this.setupCharactersAtTab.bind( this );
+
+        // To-do: Update handling of refs. React 16.3+ has createRef. 16.8+ has useRef.
+        this.bindInputRef = this.bindInputRef.bind( this );
+        this.searchInput = null;
     }
 
     /**
@@ -48,6 +52,23 @@ class CharacterMap extends React.Component {
 
     componentDidMount() {
         this.setupCharactersAtTab( 0 );
+
+        // Focus search input on mount.
+        if ( false !== this.props.autofocus && this.searchInput && 'focus' in this.searchInput ) {
+            // This is more reliable after a short wait.
+            window.setTimeout( () => {
+                this.searchInput.focus();
+            }, 25 );
+        }
+    }
+
+    /**
+     * Binds the input element to the component as a ref.
+     *
+     * @param {object} element The search input element.
+     */
+    bindInputRef( element ) {
+        this.searchInput = element;
     }
 
     // Handle clicks to the characters, running the callback function.
@@ -181,6 +202,7 @@ class CharacterMap extends React.Component {
                         value={search}
                         onChange={this.handleSearchChange}
                         autoComplete={false}
+                        ref={this.bindInputRef}
                     />
                 </ul>
                 { '' === search &&
