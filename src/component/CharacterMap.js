@@ -22,6 +22,10 @@ class CharacterMap extends React.Component {
         this.handleSearchChange = this.handleSearchChange.bind( this );
         this.clickCategoryHandler = this.clickCategoryHandler.bind( this );
         this.setupCharactersAtTab = this.setupCharactersAtTab.bind( this );
+
+        // To-do: Update handling of refs. React 16.3+ has createRef. 16.8+ has useRef.
+        this.bindInputRef = this.bindInputRef.bind( this );
+        this.searchInput = null;
     }
 
     /**
@@ -48,6 +52,23 @@ class CharacterMap extends React.Component {
 
     componentDidMount() {
         this.setupCharactersAtTab( 0 );
+
+        // Focus search input on mount.
+        if ( false !== this.props.autofocus && this.searchInput && 'focus' in this.searchInput ) {
+            // This is more reliable after a short wait.
+            window.setTimeout( () => {
+                this.searchInput.focus();
+            }, 25 );
+        }
+    }
+
+    /**
+     * Binds the input element to the component as a ref.
+     *
+     * @param {object} element The search input element.
+     */
+    bindInputRef( element ) {
+        this.searchInput = element;
     }
 
     // Handle clicks to the characters, running the callback function.
@@ -118,6 +139,25 @@ class CharacterMap extends React.Component {
         this.setState({search});
     }
 
+    getCategoryName(category) {
+        /**
+         * The categoryNames prop is expected to be a JavaScript object with translated category names corresponding
+         * to the object keys in chars.json. Keys are the untranslated names from chars.json; values are the translated
+         * names.
+         */
+        const { categoryNames } = this.props;
+
+        if (!categoryNames || 'object' !== typeof categoryNames) {
+            return category;
+        }
+
+        if (!(category in categoryNames) || 'string' !== typeof categoryNames[category]) {
+            return category;
+        }
+
+        return categoryNames[category];
+    }
+
     charListFromCharacters(characters, active) {
         var self = this;
         var categoryList = [];
@@ -148,7 +188,7 @@ class CharacterMap extends React.Component {
                     data-category-index={i}
                     onClick={ self.clickCategoryHandler }
                 >
-                    {category}
+                    {self.getCategoryName(category)}
                 </button>
             </li>));
 
@@ -170,25 +210,31 @@ class CharacterMap extends React.Component {
 
     render() {
         const {categoryList,charList,search} = this.state;
+
+        const filterLabelText = this.props.filterLabelText || 'Filter';
+        const categoriesLabelText = this.props.categoriesLabelText || 'Categories';
+        const characterListLabelText = this.props.characterListLabelText || 'Character List';
+
         return (
             <div className="charMap--container">
                 <ul className="charMap--filter">
-                    <label for="filter">Filter: </label>
+                    <label for="filter">{`${filterLabelText}: `}</label>
                     <input
                         type="text"
                         name="filter"
-                        aria-label="Filter"
+                        aria-label={filterLabelText}
                         value={search}
                         onChange={this.handleSearchChange}
                         autoComplete={false}
+                        ref={this.bindInputRef}
                     />
                 </ul>
                 { '' === search &&
-                    <ul className="charMap--category-menu" aria-label="Categories">
+                    <ul className="charMap--category-menu" aria-label={categoriesLabelText}>
                         { categoryList}
                     </ul>
                 }
-                <ul className="charMap--categories"  aria-label="Character List">
+                <ul className="charMap--categories"  aria-label={characterListLabelText}>
                     { charList }
                 </ul>
              </div>

@@ -34,6 +34,8 @@ import {CharacterMap} from 'react-character-map';
 
 ### Properties
 
+* `autofocus` (boolean): When `autofocus` is true, the component's search input will be focused on mount. Default: `true`.
+
 * `characterData` is an optional property that overrides the default character map. `characterData` should be provided in the form:
 ```js
 {
