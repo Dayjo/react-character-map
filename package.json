@@ -3,7 +3,7 @@
   "version": "0.4.1",
   "description": "A react component for selecting ascii characters from a categorised character map",
   "main": "dist/index.js",
-  "repository": "git@github.com:pallant/react-character-map.git",
+  "repository": "git@github.com:Dayjo/react-character-map.git",
   "author": "Joel Day",
   "license": "MIT",
   "peerDependencies": {
