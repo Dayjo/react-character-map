@@ -1115,7 +1115,7 @@
 
 
     "Greek": [
-           ,{ "entity": "&Alpha;", "hex": "&#0391;", "name": "Greek Capital Letter Alpha", "char": "Α" }
+           { "entity": "&Alpha;", "hex": "&#0391;", "name": "Greek Capital Letter Alpha", "char": "Α" }
            ,{ "entity": "&Beta;", "hex": "&#0392;", "name": "Greek Capital Letter Beta", "char": "Β" }
            ,{ "entity": "&Gamma;", "hex": "&#0393;", "name": "Greek Capital Letter Gamma", "char": "Γ" }
            ,{ "entity": "&Delta;", "hex": "&#0394;", "name": "Greek Capital Letter Delta", "char": "Δ" }
