@@ -258,11 +258,14 @@
            ,{ "hex": "&#2158;", "name": "VULGAR FRACTION FOUR FIFTHS", "char": "⅘" }
            ,{ "hex": "&#2159;", "name": "VULGAR FRACTION ONE SIXTH", "char": "⅙" }
            ,{ "hex": "&#215A;", "name": "VULGAR FRACTION FIVE SIXTHS", "char": "⅚" }
+		   ,{ "hex": "&#8528;", "name": "Vulgar Fraction One Seventh", "char": "⅐" }
            ,{ "hex": "&#215B;", "name": "VULGAR FRACTION ONE EIGHTH (present in WGL4)", "char": "⅛" }
            ,{ "hex": "&#215C;", "name": "VULGAR FRACTION THREE EIGHTHS (present in WGL4)", "char": "⅜" }
            ,{ "hex": "&#215D;", "name": "VULGAR FRACTION FIVE EIGHTHS (present in WGL4)", "char": "⅝" }
            ,{ "hex": "&#215E;", "name": "VULGAR FRACTION SEVEN EIGHTHS (present in WGL4)", "char": "⅞" }
-           ,{ "hex": "&#215F;", "name": "FRACTION NUMERATOR ONE", "char": "⅟" }
+           ,{ "hex": "&#8529;", "name": "Vulgar Fraction One Ninth", "char": "⅑" }
+           ,{ "hex": "&#8530;", "name": "Vulgar Fraction One Tenth", "char": "⅒" }
+		   ,{ "hex": "&#215F;", "name": "FRACTION NUMERATOR ONE", "char": "⅟" }
            ,{ "hex": "&#2160;", "name": "ROMAN NUMERAL ONE", "char": "Ⅰ" }
            ,{ "hex": "&#2161;", "name": "ROMAN NUMERAL TWO", "char": "Ⅱ" }
            ,{ "hex": "&#2162;", "name": "ROMAN NUMERAL THREE", "char": "Ⅲ" }
@@ -609,6 +612,10 @@
            ,{ "hex": "&#2769;", "name": "MEDIUM RIGHT PARENTHESIS ORNAMENT", "char": "❩" }
            ,{ "hex": "&#276A;", "name": "MEDIUM FLATTENED LEFT PARENTHESIS ORNAMENT", "char": "❪" }
            ,{ "hex": "&#276B;", "name": "MEDIUM FLATTENED RIGHT PARENTHESIS ORNAMENT", "char": "❫" }
+		   ,{ "entity": "&lsquo;", "hex": "&#8216;", "name": "Left Single Quotation Mark", "char": "‘" }
+		   ,{ "entity": "&rsquo;", "hex": "&#8217;", "name": "Right Single Quotation Mark", "char": "’" }
+		   ,{ "entity": "&ldquo;", "hex": "&#8220;", "name": "Left Double Quotation Mark", "char": "“" }
+		   ,{ "entity": "&rdquo;", "hex": "&#8221;", "name": "Right Double Quotation Mark", "char": "”" }
            ,{ "hex": "&#275D;", "name": "HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT", "char": "❝" }
            ,{ "hex": "&#275E;", "name": "HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT", "char": "❞" }
            ,{ "hex": "&#275B;", "name": "HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT", "char": "❛" }
@@ -1204,6 +1211,7 @@
            ,{ "entity": "&Yacute;", "hex": "&#00DD;", "name": "LATIN CAPITAL LETTER Y WITH ACUTE", "char": "Ý" }
            ,{ "entity": "&THORN;", "hex": "&#00DE;", "name": "LATIN CAPITAL LETTER THORN", "char": "Þ" }
            ,{ "entity": "&szlig;", "hex": "&#00DF;", "name": "LATIN SMALL LETTER SHARP S", "char": "ß" }
+		   ,{ "entity": "&szlig;", "hex": "&#223;", "name": "Latin Small Letter Sharp S", "char": "ß" }
            ,{ "entity": "&agrave;", "hex": "&#00E0;", "name": "LATIN SMALL LETTER A WITH GRAVE", "char": "à" }
            ,{ "entity": "&aacute;", "hex": "&#00E1;", "name": "LATIN SMALL LETTER A WITH ACUTE", "char": "á" }
            ,{ "entity": "&acirc;", "hex": "&#00E2;", "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX", "char": "â" }
@@ -1243,8 +1251,10 @@
            ,{ "hex": "&#0104;", "name": "LATIN CAPITAL LETTER A WITH OGONEK", "char": "Ą" }
            ,{ "hex": "&#0105;", "name": "LATIN SMALL LETTER A WITH OGONEK", "char": "ą" }
            ,{ "hex": "&#0106;", "name": "LATIN CAPITAL LETTER C WITH ACUTE", "char": "Ć" }
+           ,{ "entity": "&Cacute;", "hex": "&#262;", "name": "Latin Capital Letter C with Acute", "char": "Ć" }
            ,{ "hex": "&#0107;", "name": "LATIN SMALL LETTER C WITH ACUTE", "char": "ć" }
-           ,{ "hex": "&#0108;", "name": "LATIN CAPITAL LETTER C WITH CIRCUMFLEX", "char": "Ĉ" }
+           ,{ "entity": "&cacute;", "hex": "&#263;", "name": "Latin Small Letter C with Acute", "char": "ć" }
+		   ,{ "hex": "&#0108;", "name": "LATIN CAPITAL LETTER C WITH CIRCUMFLEX", "char": "Ĉ" }
            ,{ "hex": "&#0109;", "name": "LATIN SMALL LETTER C WITH CIRCUMFLEX", "char": "ĉ" }
            ,{ "hex": "&#010A;", "name": "LATIN CAPITAL LETTER C WITH DOT ABOVE", "char": "Ċ" }
            ,{ "hex": "&#010B;", "name": "LATIN SMALL LETTER C WITH DOT ABOVE", "char": "ċ" }
@@ -1725,7 +1735,9 @@
            ,{ "hex": "&#1E06;", "name": "LATIN CAPITAL LETTER B WITH LINE BELOW", "char": "Ḇ" }
            ,{ "hex": "&#1E07;", "name": "LATIN SMALL LETTER B WITH LINE BELOW", "char": "ḇ" }
            ,{ "hex": "&#1E08;", "name": "LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE", "char": "Ḉ" }
+           ,{ "hex": "&#7688;", "name": "Latin Capital Letter C with Cedilla and Acute", "char": "Ḉ" }
            ,{ "hex": "&#1E09;", "name": "LATIN SMALL LETTER C WITH CEDILLA AND ACUTE", "char": "ḉ" }
+           ,{ "hex": "&#7689;", "name": "Latin Small Letter C with Cedilla and Acute", "char": "ḉ" }
            ,{ "hex": "&#1E0A;", "name": "LATIN CAPITAL LETTER D WITH DOT ABOVE", "char": "Ḋ" }
            ,{ "hex": "&#1E0B;", "name": "LATIN SMALL LETTER D WITH DOT ABOVE", "char": "ḋ" }
            ,{ "hex": "&#1E0C;", "name": "LATIN CAPITAL LETTER D WITH DOT BELOW", "char": "Ḍ" }
@@ -1875,6 +1887,7 @@
            ,{ "hex": "&#1E9C;", "name": "LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE", "char": "ẜ" }
            ,{ "hex": "&#1E9D;", "name": "LATIN SMALL LETTER LONG S WITH HIGH STROKE", "char": "ẝ" }
            ,{ "hex": "&#1E9E;", "name": "LATIN CAPITAL LETTER SHARP S", "char": "ẞ" }
+           ,{ "hex": "&#7838;", "name": "Latin Capital Letter Sharp S", "char": "ẞ" }
            ,{ "hex": "&#1E9F;", "name": "LATIN SMALL LETTER DELTA", "char": "ẟ" }
            ,{ "hex": "&#1EA0;", "name": "LATIN CAPITAL LETTER A WITH DOT BELOW", "char": "Ạ" }
            ,{ "hex": "&#1EA1;", "name": "LATIN SMALL LETTER A WITH DOT BELOW", "char": "ạ" }
