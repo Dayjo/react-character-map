@@ -2290,19 +2290,230 @@
             ,{ "hex": "&#297E;", "name": "Up Fish Tail", "char": "⥾" }
             ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
             ,{ "hex": "&#1F894;", "name": "Leftwards White Arrow Within Triangle Arrowhead", "char": "🢔" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-            ,{ "hex": "&#297F;", "name": "Down Fish Tail", "char": "⥿" }
-    ]
+    ],
+
+
+    "Music": [
+            { "hex": "&#119040;", "name": "Musical Symbol Single Barline", "char": "𝄀" }
+            ,{ "hex": "&#119041;", "name": "Musical Symbol Double Barline", "char": "𝄁" }
+            ,{ "hex": "&#119042;", "name": "Musical Symbol Final Barline", "char": "𝄂" }
+            ,{ "hex": "&#119043;", "name": "Musical Symbol Reverse Final Barline", "char": "𝄃" }
+            ,{ "hex": "&#119044;", "name": "Musical Symbol Dashed Barline", "char": "𝄄" }
+            ,{ "hex": "&#119045;", "name": "Musical Symbol Short Barline", "char": "𝄅" }
+            ,{ "hex": "&#119046;", "name": "Musical Symbol Left Repeat Sign", "char": "𝄆" }
+            ,{ "hex": "&#119047;", "name": "Musical Symbol Right Repeat Sign", "char": "𝄇" }
+            ,{ "hex": "&#119048;", "name": "Musical Symbol Repeat Dots", "char": "𝄈" }
+            ,{ "hex": "&#119049;", "name": "Musical Symbol Dal Segno", "char": "𝄉" }
+            ,{ "hex": "&#119050;", "name": "Musical Symbol Da Capo", "char": "𝄊" }
+            ,{ "hex": "&#119051;", "name": "Musical Symbol Segno", "char": "𝄋" }
+            ,{ "hex": "&#119052;;", "name": "Musical Symbol Coda", "char": "𝄌" }
+            ,{ "hex": "&#119053;", "name": "Musical Symbol Repeated Figure-1", "char": "𝄍" }
+            ,{ "hex": "&#119054;", "name": "Musical Symbol Repeated Figure-2", "char": "𝄎" }
+            ,{ "hex": "&#119055;", "name": "Musical Symbol Repeated Figure-3", "char": "𝄏" }
+            ,{ "hex": "&#119056;", "name": "Musical Symbol Fermata", "char": "𝄐" }
+            ,{ "hex": "&#119057;", "name": "Musical Symbol Fermata Below", "char": "𝄑" }
+            ,{ "hex": "&#119058;", "name": "Musical Symbol Breath Mark", "char": "𝄒" }
+            ,{ "hex": "&#119059;", "name": "Musical Symbol Caesura", "char": "𝄓" }
+            ,{ "hex": "&#119060;", "name": "Musical Symbol Brace", "char": "𝄔" }
+            ,{ "hex": "&#119061;", "name": "Musical Symbol Bracket", "char": "𝄕" }
+            ,{ "hex": "&#119062;", "name": "Musical Symbol One-Line Staff", "char": "𝄖" }
+            ,{ "hex": "&#119063;", "name": "Musical Symbol Two-Line Staff", "char": "𝄗" }
+            ,{ "hex": "&#119064;", "name": "Musical Symbol Three-Line Staff", "char": "𝄘" }
+            ,{ "hex": "&#119065;", "name": "Musical Symbol Four-Line Staff", "char": "𝄙" }
+            ,{ "hex": "&#119066;", "name": "Musical Symbol Five-Line Staff", "char": "𝄚" }
+            ,{ "hex": "&#119067;", "name": "Musical Symbol Six-Line Staff", "char": "𝄛" }
+            ,{ "hex": "&#119068;", "name": "Musical Symbol Six-String Fretboard", "char": "𝄜" }
+            ,{ "hex": "&#119069;", "name": "Musical Symbol Four-String Fretboard", "char": "𝄝" }
+            ,{ "hex": "&#119070;", "name": "Musical Symbol G Clef", "char": "𝄞" }
+            ,{ "hex": "&#119071;", "name": "Musical Symbol G Clef Ottava Alta", "char": "𝄟" }
+            ,{ "hex": "&#119072;", "name": "Musical Symbol G Clef Ottava Bassa", "char": "𝄠" }
+            ,{ "hex": "&#119073;", "name": "Musical Symbol C Clef", "char": "𝄡" }
+            ,{ "hex": "&#119074;", "name": "Musical Symbol F Clef", "char": "𝄢" }
+            ,{ "hex": "&#119075;", "name": "Musical Symbol F Clef Ottava Alta", "char": "𝄣" }
+            ,{ "hex": "&#119076;", "name": "Musical Symbol F Clef Ottava Bassa", "char": "𝄤" }
+            ,{ "hex": "&#119077;", "name": "Musical Symbol Drum Clef-1", "char": "𝄥" }
+            ,{ "hex": "&#119078;", "name": "Musical Symbol Drum Clef-2", "char": "𝄦" }
+            ,{ "hex": "&#119081;", "name": "Musical Symbol Multiple Measure Rest", "char": "𝄩" }
+            ,{ "hex": "&#119082;", "name": "Musical Symbol Double Sharp", "char": "𝄪" }
+            ,{ "hex": "&#119083;", "name": "Musical Symbol Double Flat", "char": "𝄫" }
+            ,{ "hex": "&#119084;", "name": "Musical Symbol Flat Up", "char": "𝄬" }
+            ,{ "hex": "&#119085;", "name": "Musical Symbol Flat Down", "char": "𝄭" }
+            ,{ "hex": "&#119086;", "name": "Musical Symbol Natural Up", "char": "𝄮" }
+            ,{ "hex": "&#119087;", "name": "Musical Symbol Natural Down", "char": "𝄯" }
+            ,{ "hex": "&#119088;", "name": "Musical Symbol Sharp Up", "char": "𝄰" }
+            ,{ "hex": "&#119089;", "name": "Musical Symbol Sharp Down", "char": "𝄱" }
+            ,{ "hex": "&#119090;", "name": "Musical Symbol Quarter Tone Sharp", "char": "𝄲" }
+            ,{ "hex": "&#119091;", "name": "Musical Symbol Quarter Tone Flat", "char": "𝄳" }
+            ,{ "hex": "&#119092;", "name": "Musical Symbol Common Time", "char": "𝄴" }
+            ,{ "hex": "&#119093;", "name": "Musical Symbol Cut Time", "char": "𝄵" }
+            ,{ "hex": "&#119094;", "name": "Musical Symbol Ottava Alta", "char": "𝄶" }
+            ,{ "hex": "&#119095;", "name": "Musical Symbol Ottava Bassa", "char": "𝄷" }
+            ,{ "hex": "&#119096;", "name": "Musical Symbol Quindicesima Alta", "char": "𝄸" }
+            ,{ "hex": "&#119097;", "name": "Musical Symbol Quindicesima Bassa", "char": "𝄹" }
+            ,{ "hex": "&#119098;", "name": "Musical Symbol Multi Rest", "char": "𝄺" }
+            ,{ "hex": "&#119099;", "name": "Musical Symbol Whole Rest", "char": "𝄻" }
+            ,{ "hex": "&#119100;", "name": "Musical Symbol Half Rest", "char": "𝄼" }
+            ,{ "hex": "&#119101;", "name": "Musical Symbol Quarter Rest", "char": "𝄽" }
+            ,{ "hex": "&#119102;", "name": "Musical Symbol Eighth Rest", "char": "𝄾" }
+            ,{ "hex": "&#119103;", "name": "Musical Symbol Sixteenth Rest", "char": "𝄿" }
+            ,{ "hex": "&#119104;", "name": "Musical Symbol Thirty-Second Rest", "char": "𝅀" }
+            ,{ "hex": "&#119105;", "name": "Musical Symbol Sixty-Fourth Rest", "char": "𝅁" }
+            ,{ "hex": "&#119106;", "name": "Musical Symbol One Hundred Twenty-Eighth Rest", "char": "𝅂" }
+            ,{ "hex": "&#119107;", "name": "Musical Symbol X Notehead", "char": "𝅃" }
+            ,{ "hex": "&#119108;", "name": "Musical Symbol Plus Notehead", "char": "𝅄" }
+            ,{ "hex": "&#119109;", "name": "Musical Symbol Circle X Notehead", "char": "𝅅" }
+            ,{ "hex": "&#119110;", "name": "Musical Symbol Square Notehead White", "char": "𝅆" }
+            ,{ "hex": "&#119111;", "name": "Musical Symbol Square Notehead Black", "char": "𝅇" }
+            ,{ "hex": "&#119112;", "name": "Musical Symbol Triangle Notehead Up White", "char": "𝅈" }
+            ,{ "hex": "&#119114;", "name": "Musical Symbol Triangle Notehead Left White", "char": "𝅊" }
+            ,{ "hex": "&#119115;", "name": "Musical Symbol Triangle Notehead Left Black", "char": "𝅋" }
+            ,{ "hex": "&#119116;", "name": "Musical Symbol Triangle Notehead Right White", "char": "𝅌" }
+            ,{ "hex": "&#119117;", "name": "Musical Symbol Triangle Notehead Right Black", "char": "𝅍" }
+            ,{ "hex": "&#119118;", "name": "Musical Symbol Triangle Notehead Down White", "char": "𝅎" }
+            ,{ "hex": "&#119119;", "name": "Musical Symbol Triangle Notehead Down Black", "char": "𝅏" }
+            ,{ "hex": "&#119120;", "name": "Musical Symbol Triangle Notehead Up Right White", "char": "𝅐" }
+            ,{ "hex": "&#119121;", "name": "Musical Symbol Triangle Notehead Up Right Black", "char": "𝅑" }
+            ,{ "hex": "&#119122;", "name": "Musical Symbol Moon Notehead White", "char": "𝅒" }
+            ,{ "hex": "&#119123;", "name": "Musical Symbol Moon Notehead Black", "char": "𝅓" }
+            ,{ "hex": "&#119124;", "name": "Musical Symbol Triangle-Round Notehead Down White", "char": "𝅔" }
+            ,{ "hex": "&#119125;", "name": "Musical Symbol Triangle-Round Notehead Down Black", "char": "𝅕" }
+            ,{ "hex": "&#119126;", "name": "Musical Symbol Parenthesis Notehead", "char": "𝅖" }
+            ,{ "hex": "&#119127;", "name": "Musical Symbol Void Notehead", "char": "𝅗" }
+            ,{ "hex": "&#119128;", "name": "Musical Symbol Notehead Black", "char": "𝅘" }
+            ,{ "hex": "&#119130;", "name": "Musical Symbol Cluster Notehead White", "char": "𝅚" }
+            ,{ "hex": "&#119131;", "name": "Musical Symbol Cluster Notehead Black", "char": "𝅛" }
+            ,{ "hex": "&#119132;", "name": "Musical Symbol Breve", "char": "𝅜" }
+            ,{ "hex": "&#119133;", "name": "Musical Symbol Whole Note", "char": "𝅝" }
+            ,{ "hex": "&#119134;", "name": "Musical Symbol Half Note", "char": "𝅗𝅥" }
+            ,{ "hex": "&#119135;", "name": "Musical Symbol Quarter Note", "char": "𝅘𝅥" }
+            ,{ "hex": "&#119136;", "name": "Musical Symbol Eighth Note", "char": "𝅘𝅥𝅮" }
+            ,{ "hex": "&#119137;", "name": "Musical Symbol Sixteenth Note", "char": "𝅘𝅥𝅯" }
+            ,{ "hex": "&#119138;", "name": "Musical Symbol Thirty-Second Note", "char": "𝅘𝅥𝅰" }
+            ,{ "hex": "&#119139;", "name": "Musical Symbol Sixty-Fourth Note", "char": "𝅘𝅥𝅱" }
+            ,{ "hex": "&#119140;", "name": "Musical Symbol One Hundred Twenty-Eighth Note", "char": "𝅘𝅥𝅲" }
+            ,{ "hex": "&#119141;", "name": "Musical Symbol Combining Stem", "char": "𝅥" }
+            ,{ "hex": "&#119142;", "name": "Musical Symbol Combining Sprechgesang Stem", "char": "𝅦" }
+            ,{ "hex": "&#119143;", "name": "Musical Symbol Combining Tremolo-1", "char": "𝅧" }
+            ,{ "hex": "&#119144;", "name": "Musical Symbol Combining Tremolo-2", "char": "𝅨" }
+            ,{ "hex": "&#119145;", "name": "Musical Symbol Combining Tremolo-3", "char": "𝅩" }
+            ,{ "hex": "&#119146;", "name": "Musical Symbol Fingered Tremolo-1", "char": "𝅪" }
+            ,{ "hex": "&#119147;", "name": "Musical Symbol Fingered Tremolo-2", "char": "𝅫" }
+            ,{ "hex": "&#119148;", "name": "Musical Symbol Fingered Tremolo-3", "char": "𝅬" }
+            ,{ "hex": "&#119149;", "name": "Musical Symbol Combining Augmentation Dot", "char": "𝅭" }
+            ,{ "hex": "&#119150;", "name": "Musical Symbol Combining Flag-1", "char": "𝅮" }
+            ,{ "hex": "&#119151;", "name": "Musical Symbol Combining Flag-2", "char": "𝅯" }
+            ,{ "hex": "&#119152;", "name": "Musical Symbol Combining Flag-3", "char": "𝅰" }
+            ,{ "hex": "&#119153;", "name": "Musical Symbol Combining Flag-4", "char": "𝅱" }
+            ,{ "hex": "&#119154;", "name": "Musical Symbol Combining Flag-5", "char": "𝅲" }
+            ,{ "hex": "&#119163;", "name": "Musical Symbol Combining Accent", "char": "𝅻" }
+            ,{ "hex": "&#119164;", "name": "Musical Symbol Combining Staccato", "char": "𝅼" }
+            ,{ "hex": "&#119165;", "name": "Musical Symbol Combining Tenuto", "char": "𝅽" }
+            ,{ "hex": "&#119166;", "name": "Musical Symbol Combining Staccatissimo", "char": "𝅾" }
+            ,{ "hex": "&#119167;", "name": "Musical Symbol Combining Marcato", "char": "𝅿" }
+            ,{ "hex": "&#119168;", "name": "Musical Symbol Combining Marcato-Staccato", "char": "𝆀" }
+            ,{ "hex": "&#119169;", "name": "Musical Symbol Combining Accent-Staccato", "char": "𝆁" }
+            ,{ "hex": "&#119170;", "name": "Musical Symbol Combining Loure", "char": "𝆂" }
+            ,{ "hex": "&#119171;", "name": "Musical Symbol Arpeggiato Up", "char": "𝆃" }
+            ,{ "hex": "&#119172;", "name": "Musical Symbol Arpeggiato Down", "char": "𝆄" }
+            ,{ "hex": "&#119173;", "name": "Musical Symbol Combining Doit", "char": "𝆅" }
+            ,{ "hex": "&#119174;", "name": "Musical Symbol Combining Rip", "char": "𝆆" }
+            ,{ "hex": "&#119175;", "name": "Musical Symbol Combining Flip", "char": "𝆇" }
+            ,{ "hex": "&#119176;", "name": "Musical Symbol Combining Smear", "char": "𝆈" }
+            ,{ "hex": "&#119177;", "name": "Musical Symbol Combining Bend", "char": "𝆉" }
+            ,{ "hex": "&#119178;", "name": "Musical Symbol Combining Double Tongue", "char": "𝆊" }
+            ,{ "hex": "&#119179;", "name": "Musical Symbol Combining Triple Tongue", "char": "𝆋" }
+            ,{ "hex": "&#119180;", "name": "Musical Symbol Rinforzando", "char": "𝆌" }
+            ,{ "hex": "&#119181;", "name": "Musical Symbol Subito", "char": "𝆍" }
+            ,{ "hex": "&#119182;", "name": "Musical Symbol Z", "char": "𝆎" }
+            ,{ "hex": "&#119183;", "name": "Musical Symbol Piano", "char": "𝆏" }
+            ,{ "hex": "&#119184;", "name": "Musical Symbol Mezzo", "char": "𝆐" }
+            ,{ "hex": "&#119185;", "name": "Musical Symbol Forte", "char": "𝆑" }
+            ,{ "hex": "&#119186;", "name": "Musical Symbol Crescendo", "char": "𝆒" }
+            ,{ "hex": "&#119187;", "name": "Musical Symbol Decrescendo", "char": "𝆓" }
+            ,{ "hex": "&#119188;", "name": "Musical Symbol Grace Note Slash", "char": "𝆔" }
+            ,{ "hex": "&#119189;", "name": "Musical Symbol Grace Note No Slash", "char": "𝆕" }
+            ,{ "hex": "&#119190;", "name": "Musical Symbol Tr", "char": "𝆖" }
+            ,{ "hex": "&#119191;", "name": "Musical Symbol Turn", "char": "𝆗" }
+            ,{ "hex": "&#119192;", "name": "Musical Symbol Inverted Turn", "char": "𝆘" }
+            ,{ "hex": "&#119193;", "name": "Musical Symbol Turn Slash", "char": "𝆙" }
+            ,{ "hex": "&#119194;", "name": "Musical Symbol Turn Up", "char": "𝆚" }
+            ,{ "hex": "&#119195;", "name": "Musical Symbol Ornament Stroke-1", "char": "𝆛" }
+            ,{ "hex": "&#119196;", "name": "Musical Symbol Ornament Stroke-2", "char": "𝆜" }
+            ,{ "hex": "&#119197;", "name": "Musical Symbol Ornament Stroke-3", "char": "𝆝" }
+            ,{ "hex": "&#119198;", "name": "Musical Symbol Ornament Stroke-4", "char": "𝆞" }
+            ,{ "hex": "&#119199;", "name": "Musical Symbol Ornament Stroke-5", "char": "𝆟" }
+            ,{ "hex": "&#119200;", "name": "Musical Symbol Ornament Stroke-6", "char": "𝆠" }
+            ,{ "hex": "&#119201;", "name": "Musical Symbol Ornament Stroke-7", "char": "𝆡" }
+            ,{ "hex": "&#119202;", "name": "Musical Symbol Ornament Stroke-8", "char": "𝆢" }
+            ,{ "hex": "&#119203;", "name": "Musical Symbol Ornament Stroke-9", "char": "𝆣" }
+            ,{ "hex": "&#119204;", "name": "Musical Symbol Ornament Stroke-10", "char": "𝆤" }
+            ,{ "hex": "&#119205;", "name": "Musical Symbol Ornament Stroke-11", "char": "𝆥" }
+            ,{ "hex": "&#119206;", "name": "Musical Symbol Hauptstimme", "char": "𝆦" }
+            ,{ "hex": "&#119207;", "name": "Musical Symbol Nebenstimme", "char": "𝆧" }
+            ,{ "hex": "&#119208;", "name": "Musical Symbol End of Stimme", "char": "𝆨" }
+            ,{ "hex": "&#119209;", "name": "Musical Symbol Degree Slash", "char": "𝆩" }
+            ,{ "hex": "&#119210;", "name": "Musical Symbol Combining Down Bow", "char": "𝆪" }
+            ,{ "hex": "&#119211;", "name": "Musical Symbol Combining Up Bow", "char": "𝆫" }
+            ,{ "hex": "&#119212;", "name": "Musical Symbol Combining Harmonic", "char": "𝆬" }
+            ,{ "hex": "&#119213;", "name": "Musical Symbol Combining Snap Pizzicato", "char": "𝆭" }
+            ,{ "hex": "&#119214;", "name": "Musical Symbol Pedal Mark", "char": "𝆮" }
+            ,{ "hex": "&#119215;", "name": "Musical Symbol Pedal Up Mark", "char": "𝆯" }
+            ,{ "hex": "&#119216;", "name": "Musical Symbol Half Pedal Mark", "char": "𝆰" }
+            ,{ "hex": "&#119217;", "name": "Musical Symbol Glissando Up", "char": "𝆱" }
+            ,{ "hex": "&#119218;", "name": "Musical Symbol Glissando Down", "char": "𝆲" }
+            ,{ "hex": "&#119219;", "name": "Musical Symbol with Fingernails", "char": "𝆳" }
+            ,{ "hex": "&#119220;", "name": "Musical Symbol Damp", "char": "𝆴" }
+            ,{ "hex": "&#119221;", "name": "Musical Symbol Damp All", "char": "𝆵" }
+            ,{ "hex": "&#119222;", "name": "Musical Symbol Maxima", "char": "𝆶" }
+            ,{ "hex": "&#119223;", "name": "Musical Symbol Longa", "char": "𝆷" }
+            ,{ "hex": "&#119224;", "name": "Musical Symbol Brevis", "char": "𝆸" }
+            ,{ "hex": "&#119225;", "name": "Musical Symbol Semibrevis White", "char": "𝆹" }
+            ,{ "hex": "&#119226;", "name": "Musical Symbol Semibrevis Black", "char": "𝆺" }
+            ,{ "hex": "&#119227;", "name": "Musical Symbol Minima", "char": "𝆹𝅥" }
+            ,{ "hex": "&#119228;", "name": "Musical Symbol Minima Black", "char": "𝆺𝅥" }
+            ,{ "hex": "&#119229;", "name": "Musical Symbol Semiminima White", "char": "𝆹𝅥𝅮" }
+            ,{ "hex": "&#119230;", "name": "Musical Symbol Semiminima Black", "char": "𝆺𝅥𝅮" }
+            ,{ "hex": "&#119231;", "name": "Musical Symbol Fusa White", "char": "𝆹𝅥𝅯" }
+            ,{ "hex": "&#119232;", "name": "Musical Symbol Fusa Black", "char": "𝆺𝅥𝅯" }
+            ,{ "hex": "&#119233;", "name": "Musical Symbol Longa Perfecta Rest", "char": "𝇁" }
+            ,{ "hex": "&#119234;", "name": "Musical Symbol Longa Imperfecta Rest", "char": "𝇂" }
+            ,{ "hex": "&#119235;", "name": "Musical Symbol Brevis Rest", "char": "𝇃" }
+            ,{ "hex": "&#119236;", "name": "Musical Symbol Semibrevis Rest", "char": "𝇄" }
+            ,{ "hex": "&#119237;", "name": "Musical Symbol Minima Rest", "char": "𝇅" }
+            ,{ "hex": "&#119238;", "name": "Musical Symbol Semiminima Rest", "char": "𝇆" }
+            ,{ "hex": "&#119239;", "name": "Musical Symbol Tempus Perfectum Cum Prolatione Perfecta", "char": "𝇇" }
+            ,{ "hex": "&#119240;", "name": "Musical Symbol Tempus Perfectum Cum Prolatione Imperfecta", "char": "𝇈" }
+            ,{ "hex": "&#119241;", "name": "Musical Symbol Tempus Perfectum Cum Prolatione Perfecta Diminution-1", "char": "𝇉" }
+            ,{ "hex": "&#119242;", "name": "Musical Symbol Tempus Imperfectum Cum Prolatione Perfecta", "char": "𝇊" }
+            ,{ "hex": "&#119243;", "name": "Musical Symbol Tempus Imperfectum Cum Prolatione Imperfecta", "char": "𝇋" }
+            ,{ "hex": "&#119244;", "name": "Musical Symbol Tempus Imperfectum Cum Prolatione Imperfecta Diminution-1", "char": "𝇌" }
+            ,{ "hex": "&#119245;", "name": "Musical Symbol Tempus Imperfectum Cum Prolatione Imperfecta Diminution-2", "char": "𝇍" }
+            ,{ "hex": "&#119246;", "name": "Musical Symbol Tempus Imperfectum Cum Prolatione Imperfecta Diminution-3", "char": "𝇎" }
+            ,{ "hex": "&#119247;", "name": "Musical Symbol Croix", "char": "𝇏" }
+            ,{ "hex": "&#119248;", "name": "Musical Symbol Gregorian C Clef", "char": "𝇐" }
+            ,{ "hex": "&#119249;", "name": "Musical Symbol Gregorian F Clef", "char": "𝇑" }
+            ,{ "hex": "&#119250;", "name": "Musical Symbol Square B", "char": "𝇒" }
+            ,{ "hex": "&#119251;", "name": "Musical Symbol Virga", "char": "𝇓" }
+            ,{ "hex": "&#119252;", "name": "Musical Symbol Podatus", "char": "𝇔" }
+            ,{ "hex": "&#119253;", "name": "Musical Symbol Clivis", "char": "𝇕" }
+            ,{ "hex": "&#119254;", "name": "Musical Symbol Scandicus", "char": "𝇖" }
+            ,{ "hex": "&#119255;", "name": "Musical Symbol Climacus", "char": "𝇗" }
+            ,{ "hex": "&#119256;", "name": "Musical Symbol Torculus", "char": "𝇘" }
+            ,{ "hex": "&#119257;", "name": "Musical Symbol Porrectus", "char": "𝇙" }
+            ,{ "hex": "&#119258;", "name": "Musical Symbol Porrectus Flexus", "char": "𝇚" }
+            ,{ "hex": "&#119259;", "name": "Musical Symbol Scandicus Flexus", "char": "𝇛" }
+            ,{ "hex": "&#119260;", "name": "Musical Symbol Torculus Resupinus", "char": "𝇜" }
+            ,{ "hex": "&#119261;", "name": "Musical Symbol Pes Subpunctis", "char": "𝇝" }
+            ,{ "hex": "&#119262;", "name": "Musical Symbol Kievan C Clef", "char": "𝇞" }
+            ,{ "hex": "&#119263;", "name": "Musical Symbol Kievan End of Piece", "char": "𝇟" }
+            ,{ "hex": "&#119264;", "name": "Musical Symbol Kievan Final Note", "char": "𝇠" }
+            ,{ "hex": "&#119265;", "name": "Musical Symbol Kievan Recitative Mark", "char": "𝇡" }
+            ,{ "hex": "&#119266;", "name": "Musical Symbol Kievan Whole Note", "char": "𝇢" }
+            ,{ "hex": "&#119267;", "name": "Musical Symbol Kievan Half Note", "char": "𝇣" }
+            ,{ "hex": "&#119268;", "name": "Musical Symbol Kievan Quarter Note Stem Down", "char": "𝇤" }
+            ,{ "hex": "&#119269;", "name": "Musical Symbol Kievan Quarter Note Stem Up", "char": "𝇥" }
+            ,{ "hex": "&#119270;", "name": "Musical Symbol Kievan Eighth Note Stem Down", "char": "𝇦" }
+            ,{ "hex": "&#119271;", "name": "Musical Symbol Kievan Eighth Note Stem Up", "char": "𝇧" }
+            ,{ "hex": "&#119272;", "name": "Musical Symbol Kievan Flat Sign", "char": "𝇨" }			
+		]
 }
