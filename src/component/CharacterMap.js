@@ -176,6 +176,7 @@ class CharacterMap extends React.Component {
                             data-entity={characters[category][p].entity}
                             data-char={characters[category][p].char}
                             data-title={characters[category][p].name}
+                            title={characters[category][p].name}
                             onClick={ ((e) => self.charClickHandler(e,characters[category][p])) }
                         >
                             {characters[category][p].char}
