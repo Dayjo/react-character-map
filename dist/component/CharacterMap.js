@@ -247,6 +247,7 @@ var CharacterMap = function (_React$Component) {
                                     'data-entity': characters[category][p].entity,
                                     'data-char': characters[category][p].char,
                                     'data-title': characters[category][p].name,
+                                    title: characters[category][p].name,
                                     onClick: function onClick(e) {
                                         return self.charClickHandler(e, characters[category][p]);
                                     }
