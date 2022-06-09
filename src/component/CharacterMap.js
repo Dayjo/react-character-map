@@ -11,6 +11,17 @@ import './style.css';
 class CharacterMap extends React.Component {
     constructor(props) {
         super(props);
+
+        try {
+            this.paletteCache = JSON.parse( localStorage.getItem('tenupISCcharPalette') );
+            this.paletteCache = this.paletteCache.length ? this.paletteCache : [];
+        } catch(error) {
+            this.paletteCache = [];
+        }
+
+        this.secondaryPaletteCache = [];
+        this.leastUsedCharFromPalette = false;
+        this.dirtyPalette = false;
         this.state = {
             active: 0,
             search: '',
@@ -22,6 +33,8 @@ class CharacterMap extends React.Component {
         this.handleSearchChange = this.handleSearchChange.bind( this );
         this.clickCategoryHandler = this.clickCategoryHandler.bind( this );
         this.setupCharactersAtTab = this.setupCharactersAtTab.bind( this );
+        // this.setPalette = this.setPalette.bind( this );
+        // this.addToPalette = this.addToPalette.bind( this );
 
         // To-do: Update handling of refs. React 16.3+ has createRef. 16.8+ has useRef.
         this.bindInputRef = this.bindInputRef.bind( this );
@@ -74,7 +87,57 @@ class CharacterMap extends React.Component {
     // Handle clicks to the characters, running the callback function.
     charClickHandler(e, char){
         e.preventDefault();
+        this.setPalette(char);
         return this.props.onSelect(char, e.target);
+    }
+
+    setPalette(char) {
+        const paletteMaxSize = 5;
+        const charAtIndex = this.paletteCache.findIndex(p => p.char.hex === char.hex);
+
+        if ( this.paletteCache.length < paletteMaxSize || -1 !== charAtIndex ) {
+            this.paletteCache = this.addToPalette(char, this.paletteCache);
+        } else if ( -1 === charAtIndex ) {
+            this.secondaryPaletteCache = this.addToPalette(char, this.secondaryPaletteCache);
+        }
+
+        if ( this.paletteCache.length === 5 ) {
+            this.leastUsedCharFromPalette = this.paletteCache[ paletteMaxSize - 1 ];
+        }
+
+        /*
+         * Sort the palette in descending order of the count.
+         */
+        this.paletteCache.sort( ( a, b ) => b.count - a.count );
+        this.secondaryPaletteCache.sort( ( a, b ) => b.count - a.count );
+
+        if (this.secondaryPaletteCache.length > 0) {
+            if (this.secondaryPaletteCache[0].count > this.paletteCache[paletteMaxSize - 1].count) {
+                const maxCountCharInSecondaryPalette = this.secondaryPaletteCache.shift();
+                this.paletteCache[paletteMaxSize - 1] = maxCountCharInSecondaryPalette;
+            }
+        }
+
+        localStorage.setItem('tenupISCcharPalette', JSON.stringify(this.paletteCache));
+
+        console.log(
+            this.paletteCache.map(i=>i.char.char)
+        );
+    }
+
+    addToPalette(char, palette) {
+        const charAtIndex = palette.findIndex(p => p.char.hex === char.hex);
+
+        if ( charAtIndex !== -1 ) {
+            ++palette[ charAtIndex ].count;
+        } else {
+            palette.push( {
+                'char': char,
+                'count': 1,
+            } )
+        }
+
+        return palette;
     }
 
     /**
