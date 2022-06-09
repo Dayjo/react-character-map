@@ -28,13 +28,12 @@ class CharacterMap extends React.Component {
             categoryList: '',
             charList: '',
             fullCharList: '',
+            charPalette: this.paletteCache,
         };
         this.resultsCache=[];
         this.handleSearchChange = this.handleSearchChange.bind( this );
         this.clickCategoryHandler = this.clickCategoryHandler.bind( this );
         this.setupCharactersAtTab = this.setupCharactersAtTab.bind( this );
-        // this.setPalette = this.setPalette.bind( this );
-        // this.addToPalette = this.addToPalette.bind( this );
 
         // To-do: Update handling of refs. React 16.3+ has createRef. 16.8+ has useRef.
         this.bindInputRef = this.bindInputRef.bind( this );
@@ -91,27 +90,44 @@ class CharacterMap extends React.Component {
         return this.props.onSelect(char, e.target);
     }
 
+    /**
+     * Sets the charPalette state.
+     *
+     * @param {object} char The character object
+     */
     setPalette(char) {
         const paletteMaxSize = 5;
-        const charAtIndex = this.paletteCache.findIndex(p => p.char.hex === char.hex);
+        const charAtIndex = this.paletteCache.findIndex(p => p.hex === char.hex);
 
+        /* If the primary palette cache is not fully filled OR if the character is already
+         * present in primary, then add the character to it.
+         */
         if ( this.paletteCache.length < paletteMaxSize || -1 !== charAtIndex ) {
             this.paletteCache = this.addToPalette(char, this.paletteCache);
+        /* Else add it to the secondary cache. */
         } else if ( -1 === charAtIndex ) {
             this.secondaryPaletteCache = this.addToPalette(char, this.secondaryPaletteCache);
         }
 
-        if ( this.paletteCache.length === 5 ) {
+        /* If the primary cache is fully filled, then save the least used
+         * character from the cache for future reference.
+         */
+        if ( this.paletteCache.length === paletteMaxSize ) {
             this.leastUsedCharFromPalette = this.paletteCache[ paletteMaxSize - 1 ];
         }
 
         /*
-         * Sort the palette in descending order of the count.
+         * Sort the palettes in descending order of the count.
          */
         this.paletteCache.sort( ( a, b ) => b.count - a.count );
         this.secondaryPaletteCache.sort( ( a, b ) => b.count - a.count );
 
         if (this.secondaryPaletteCache.length > 0) {
+            /* If the count of the max used character in secondary is more than
+             * the count of the least used character in the primary, then remove
+             * that character from secondary and replace the least used character
+             * from primary with it.
+             */
             if (this.secondaryPaletteCache[0].count > this.paletteCache[paletteMaxSize - 1].count) {
                 const maxCountCharInSecondaryPalette = this.secondaryPaletteCache.shift();
                 this.paletteCache[paletteMaxSize - 1] = maxCountCharInSecondaryPalette;
@@ -119,20 +135,27 @@ class CharacterMap extends React.Component {
         }
 
         localStorage.setItem('tenupISCcharPalette', JSON.stringify(this.paletteCache));
-
-        console.log(
-            this.paletteCache.map(i=>i.char.char)
-        );
+        this.setState( { 'charPalette': this.paletteCache } );
     }
 
+    /**
+     * Adds a character to the character palette.
+     *
+     * @param {object} char The character object.
+     * @param {array} palette The char palette array.
+     * @returns {array}
+     */
     addToPalette(char, palette) {
-        const charAtIndex = palette.findIndex(p => p.char.hex === char.hex);
+        const charAtIndex = palette.findIndex(p => p.hex === char.hex);
 
         if ( charAtIndex !== -1 ) {
             ++palette[ charAtIndex ].count;
         } else {
             palette.push( {
-                'char': char,
+                'char': char.char,
+                'entity': char.entity,
+                'hex': char.hex,
+                'name': char.name,
                 'count': 1,
             } )
         }
@@ -278,6 +301,8 @@ class CharacterMap extends React.Component {
         const filterLabelText = this.props.filterLabelText || 'Filter';
         const categoriesLabelText = this.props.categoriesLabelText || 'Categories';
         const characterListLabelText = this.props.characterListLabelText || 'Character List';
+        const mostUsedPaletteText = this.props.mostUsedPaletteText || 'Most used';
+        const {charList: charPalette} = this.charListFromCharacters( { 'Palette': this.paletteCache }, 0);
 
         return (
             <div className="charMap--container">
@@ -293,6 +318,14 @@ class CharacterMap extends React.Component {
                         ref={this.bindInputRef}
                     />
                 </ul>
+                { this.props.mostUsedPalette && this.paletteCache.length && (
+                    <div className="charMap--last-used-palette-wrapper">
+                        <label>{`${mostUsedPaletteText}: `}</label>
+                        <ul className="charMap--last-used-palette" aria-label={mostUsedPaletteText}>
+                            { charPalette }
+                        </ul>
+                    </div>
+                )  }
                 { '' === search &&
                     <ul className="charMap--category-menu" aria-label={categoriesLabelText}>
                         { categoryList}
