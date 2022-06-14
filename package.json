@@ -1,6 +1,6 @@
 {
   "name": "react-character-map",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "A react component for selecting ascii characters from a categorised character map",
   "main": "dist/index.js",
   "repository": "git@github.com:Dayjo/react-character-map.git",
