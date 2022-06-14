@@ -219,14 +219,14 @@ class CharacterMap extends React.Component {
         return (
             <div className="charMap--container">
                 <ul className="charMap--filter">
-                    <label for="filter">{`${filterLabelText}: `}</label>
+                    <label htmlFor="filter">{`${filterLabelText}: `}</label>
                     <input
                         type="text"
                         name="filter"
                         aria-label={filterLabelText}
                         value={search}
                         onChange={this.handleSearchChange}
-                        autoComplete={false}
+                        autoComplete="false"
                         ref={this.bindInputRef}
                     />
                 </ul>

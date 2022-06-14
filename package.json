@@ -6,23 +6,22 @@
   "repository": "git@github.com:Dayjo/react-character-map.git",
   "author": "Joel Day",
   "license": "MIT",
-  "peerDependencies": {
-    "react": ">=15.0 <= 16"
-  },
+  "peerDependencies": {},
   "scripts": {
     "validate-json": "jsonlint src/component/*.json --quiet",
     "build": "npm run validate-json && babel src -d dist --copy-files"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
-    "babel-jest": "^19.0.0",
+    "babel-jest": "28.1.1",
     "babel-plugin-async-to-promises": "^1.0.5",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
-    "jsonlint": "^1.6.3",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "jsonlint": "^1.6.3"
+  },
+  "dependencies": {
+    "react": "16.4.0",
+    "react-dom": "16.4.0"
   }
 }
