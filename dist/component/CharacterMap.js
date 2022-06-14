@@ -307,7 +307,7 @@ var CharacterMap = function (_React$Component) {
                     { className: 'charMap--filter' },
                     _react2.default.createElement(
                         'label',
-                        { 'for': 'filter' },
+                        { htmlFor: 'filter' },
                         filterLabelText + ': '
                     ),
                     _react2.default.createElement('input', {
@@ -316,7 +316,7 @@ var CharacterMap = function (_React$Component) {
                         'aria-label': filterLabelText,
                         value: search,
                         onChange: this.handleSearchChange,
-                        autoComplete: false,
+                        autoComplete: 'false',
                         ref: this.bindInputRef
                     })
                 ),
