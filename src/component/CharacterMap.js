@@ -13,13 +13,14 @@ class CharacterMap extends React.Component {
         super(props);
 
         try {
-            this.paletteCache = JSON.parse( localStorage.getItem('tenupISCcharPalette') );
-            this.paletteCache = this.paletteCache.length ? this.paletteCache : [];
+            this.paletteCache = JSON.parse( localStorage.getItem('dayjoReactCharPalette') );
+            this.paletteCache = Array.isArray( this.paletteCache ) ? this.paletteCache : [];
         } catch(error) {
             this.paletteCache = [];
         }
 
-        this.secondaryPaletteCache = [];
+        this.secondaryPaletteCache = JSON.parse( sessionStorage.getItem('dayjoReactCharSecondaryPalette') );
+        this.secondaryPaletteCache = Array.isArray( this.secondaryPaletteCache ) ? this.secondaryPaletteCache : [];
         this.leastUsedCharFromPalette = false;
         this.dirtyPalette = false;
         this.state = {
@@ -131,10 +132,12 @@ class CharacterMap extends React.Component {
             if (this.secondaryPaletteCache[0].count > this.paletteCache[paletteMaxSize - 1].count) {
                 const maxCountCharInSecondaryPalette = this.secondaryPaletteCache.shift();
                 this.paletteCache[paletteMaxSize - 1] = maxCountCharInSecondaryPalette;
+                this.paletteCache.sort( ( a, b ) => b.count - a.count );
             }
         }
 
-        localStorage.setItem('tenupISCcharPalette', JSON.stringify(this.paletteCache));
+        localStorage.setItem('dayjoReactCharPalette', JSON.stringify(this.paletteCache));
+        sessionStorage.setItem('dayjoReactCharSecondaryPalette', JSON.stringify(this.secondaryPaletteCache));
         this.setState( { 'charPalette': this.paletteCache } );
     }
 
@@ -318,14 +321,14 @@ class CharacterMap extends React.Component {
                         ref={this.bindInputRef}
                     />
                 </ul>
-                { this.props.mostUsedPalette && this.paletteCache.length && (
+                { ( this.props.mostUsedPalette && this.paletteCache.length ) ? (
                     <div className="charMap--last-used-palette-wrapper">
                         <label>{`${mostUsedPaletteText}: `}</label>
                         <ul className="charMap--last-used-palette" aria-label={mostUsedPaletteText}>
                             { charPalette }
                         </ul>
                     </div>
-                )  }
+                ) : '' }
                 { '' === search &&
                     <ul className="charMap--category-menu" aria-label={categoriesLabelText}>
                         { categoryList}

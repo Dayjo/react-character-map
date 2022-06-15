@@ -41,13 +41,14 @@ var CharacterMap = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (CharacterMap.__proto__ || Object.getPrototypeOf(CharacterMap)).call(this, props));
 
         try {
-            _this.paletteCache = JSON.parse(localStorage.getItem('tenupISCcharPalette'));
-            _this.paletteCache = _this.paletteCache.length ? _this.paletteCache : [];
+            _this.paletteCache = JSON.parse(localStorage.getItem('dayjoReactCharPalette'));
+            _this.paletteCache = Array.isArray(_this.paletteCache) ? _this.paletteCache : [];
         } catch (error) {
             _this.paletteCache = [];
         }
 
-        _this.secondaryPaletteCache = [];
+        _this.secondaryPaletteCache = JSON.parse(sessionStorage.getItem('dayjoReactCharSecondaryPalette'));
+        _this.secondaryPaletteCache = Array.isArray(_this.secondaryPaletteCache) ? _this.secondaryPaletteCache : [];
         _this.leastUsedCharFromPalette = false;
         _this.dirtyPalette = false;
         _this.state = {
@@ -190,10 +191,14 @@ var CharacterMap = function (_React$Component) {
                 if (this.secondaryPaletteCache[0].count > this.paletteCache[paletteMaxSize - 1].count) {
                     var maxCountCharInSecondaryPalette = this.secondaryPaletteCache.shift();
                     this.paletteCache[paletteMaxSize - 1] = maxCountCharInSecondaryPalette;
+                    this.paletteCache.sort(function (a, b) {
+                        return b.count - a.count;
+                    });
                 }
             }
 
-            localStorage.setItem('tenupISCcharPalette', JSON.stringify(this.paletteCache));
+            localStorage.setItem('dayjoReactCharPalette', JSON.stringify(this.paletteCache));
+            sessionStorage.setItem('dayjoReactCharSecondaryPalette', JSON.stringify(this.secondaryPaletteCache));
             this.setState({ 'charPalette': this.paletteCache });
         }
 
@@ -423,7 +428,7 @@ var CharacterMap = function (_React$Component) {
                         ref: this.bindInputRef
                     })
                 ),
-                this.props.mostUsedPalette && this.paletteCache.length && _react2.default.createElement(
+                this.props.mostUsedPalette && this.paletteCache.length ? _react2.default.createElement(
                     'div',
                     { className: 'charMap--last-used-palette-wrapper' },
                     _react2.default.createElement(
@@ -436,7 +441,7 @@ var CharacterMap = function (_React$Component) {
                         { className: 'charMap--last-used-palette', 'aria-label': mostUsedPaletteText },
                         charPalette
                     )
-                ),
+                ) : '',
                 '' === search && _react2.default.createElement(
                     'ul',
                     { className: 'charMap--category-menu', 'aria-label': categoriesLabelText },
