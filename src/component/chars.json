@@ -650,7 +650,7 @@
            ,{ "hex": "&#22F0;", "name": "UP RIGHT DIAGONAL ELLIPSIS", "char": "⋰" }
            ,{ "hex": "&#22F1;", "name": "DOWN RIGHT DIAGONAL ELLIPSIS", "char": "⋱" }
 		   ,{ "entity": "&hairsp;", "hex": "&#200A;", "name": "Hair Space", "char": " " }
-           ,{ "entity": "&nbsp;", "hex": "&#00A0;", "name": "No-Break Space", "char": " " }
+           ,{ "entity": "&nbsp;", "hex": "&#00A0;", "name": "No-Break Space", "char": " " }
            ,{ "entity": "&ensp;", "hex": "&#2002;", "name": "En Space", "char": " " }
            ,{ "entity": "&emsp;", "hex": "&#2003;", "name": "Em Space", "char": " " }
            ,{ "entity": "&thinsp;", "hex": "&#2009;", "name": "Thin Space", "char": " " }
