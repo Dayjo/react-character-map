@@ -402,7 +402,7 @@ var CharacterMap = function (_React$Component) {
             var filterLabelText = this.props.filterLabelText || 'Filter';
             var categoriesLabelText = this.props.categoriesLabelText || 'Categories';
             var characterListLabelText = this.props.characterListLabelText || 'Character List';
-            var mostUsedPaletteText = this.props.mostUsedPaletteText || 'Most used';
+            var mostUsedPaletteText = this.props.mostUsedPaletteLabelText || 'Most used';
 
             var _charListFromCharacte3 = this.charListFromCharacters({ 'Palette': this.paletteCache }, 0),
                 charPalette = _charListFromCharacte3.charList;
