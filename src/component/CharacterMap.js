@@ -304,7 +304,7 @@ class CharacterMap extends React.Component {
         const filterLabelText = this.props.filterLabelText || 'Filter';
         const categoriesLabelText = this.props.categoriesLabelText || 'Categories';
         const characterListLabelText = this.props.characterListLabelText || 'Character List';
-        const mostUsedPaletteText = this.props.mostUsedPaletteText || 'Most used';
+        const mostUsedPaletteText = this.props.mostUsedPaletteLabelText || 'Most used';
         const {charList: charPalette} = this.charListFromCharacters( { 'Palette': this.paletteCache }, 0);
 
         return (
