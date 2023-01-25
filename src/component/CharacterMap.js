@@ -129,7 +129,7 @@ class CharacterMap extends React.Component {
              * that character from secondary and replace the least used character
              * from primary with it.
              */
-            if (this.secondaryPaletteCache[0].count > this.paletteCache[paletteMaxSize - 1].count) {
+            if (this.paletteCache[paletteMaxSize - 1] && this.secondaryPaletteCache[0].count > this.paletteCache[paletteMaxSize - 1].count) {
                 const maxCountCharInSecondaryPalette = this.secondaryPaletteCache.shift();
                 this.paletteCache[paletteMaxSize - 1] = maxCountCharInSecondaryPalette;
                 this.paletteCache.sort( ( a, b ) => b.count - a.count );
