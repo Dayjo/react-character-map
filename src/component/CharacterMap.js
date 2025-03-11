@@ -181,9 +181,9 @@ class CharacterMap extends React.Component {
                 if (!characters[group][character].name) {
                     return;
                 }
-                // If search string is one character long, look for names that start with that character.
+                // If search string is one character long, look for names that match that character using the pattern `LETTER {?}`.
                 if (1===search.length) {
-                    if (0 === characters[group][character].name.toLowerCase().indexOf(search.toLowerCase())) {
+                    if (new RegExp(`LETTER ${search.toUpperCase()}`).test(characters[group][character].name)) {
                         filteredCharacters['Results'].push(characters[group][character]);
                     }
                 } else {
